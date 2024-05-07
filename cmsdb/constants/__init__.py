@@ -19,6 +19,7 @@ n_leps = Number(3)
 m_z = Number(91.1876, {"z_mass": 0.0021})
 
 # branching ratios
+#https://pdg.lbl.gov/2023/tables/contents_tables.html
 br_w = DotDict()
 br_w["had"] = Number(0.6741, {"br_w_had": 0.0027})
 br_w["lep"] = 1 - br_w.had
