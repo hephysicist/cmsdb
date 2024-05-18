@@ -23,7 +23,7 @@ campaign_run3_2022_postEE_nano_tau_v12 = Campaign(
         "custom": {
             "name": "run3_2022_postEE_nano_tau_v12",
             "creator": "desy",
-            "location": "root://eoscms.cern.ch/eos/cms/store/group/phys_tau/irandreo/Run3_22_postEE_new",  # noqa
+            #"location": "root://eoscms.cern.ch/eos/cms/store/group/phys_tau/irandreo/Run3_22_postEE_new",  # noqa
         },
     },
 )

@@ -32,22 +32,25 @@ dy_lep = dy.add_process(
     name="dy_lep",
     id=51000,
     label=rf"({dy.label} $Z \rightarrow ll$",
-    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+        13.6: Number(5455.0*kfactor_dy)},
 )
 
 dy_z2mumu = dy_lep.add_process(
     name="dy_z2mumu",
     id=51001,
-    label=rf"({dy.label} $Z \rightarrow \mu (\tau \rightarrow \mu$)",
-    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    label=rf"$Z \rightarrow \mu (\tau \rightarrow \mu$)",
+    xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+           13.6: Number(5455.0*kfactor_dy)},
     color=(51,153,204),
 )
 
 dy_z2tautau = dy_lep.add_process(
     name="dy_z2tautau",
     id=51002,
-    label=rf"({dy.label} $Z \rightarrow \tau_h (\tau \rightarrow \mu)$",
-    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    label=rf"$Z \rightarrow \tau_h (\tau \rightarrow \mu)$",
+    xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+           13.6: Number(5455.0*kfactor_dy)},
     color=(255,204,102),
 )
 
@@ -67,7 +70,8 @@ wj = w.add_process(
     name="wj",
     id=6001,
     label="W + jets",
-    xsecs={ 13.6 : Number(55300.*kfactor_wj)},
+    xsecs={13.6 : Number(55300.*kfactor_wj),
+           13   : Number(55300.*kfactor_wj)}, #FIXME
 )
 
 #

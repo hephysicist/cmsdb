@@ -47,7 +47,11 @@ h_ggf = h.add_process(
     id=11000,
     label=r"$H_{ggf}$",
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(48.68, { # value for mH=125 GeV
+            "pdf": 0.0185j,
+            "th": (0.0426j, 0.0648j),
+            "alpha_s": (0.0259j, 0.0262j)}
+        ),  # TODO
         13.6: Number(52.23, {  # value for mH=125 GeV
             "pdf": 0.032j,
             "th": (0.046j, 0.067j),
@@ -61,7 +65,8 @@ h_ggf_tautau = h_ggf.add_process(
     id=11100,
  #   xsecs={ecm: h_ggf.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
     label=r"$H_{ggf} \rightarrow \tau\tau$",
-    xsecs={13.6: h_ggf.get_xsec(13.6) * const.br_h.tt},
+    xsecs={13.6 : h_ggf.get_xsec(13.6) * const.br_h.tt,
+           13   : h_ggf.get_xsec(13) * const.br_h.tt},
 )
 
 h_vbf = h.add_process(
