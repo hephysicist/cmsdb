@@ -133,12 +133,12 @@ __all__ = [
     "h_hwwqqlnu", "h_hww2l2nu", "h_hww4q",
     "h_hzz4l", "h_hzz2l2nu", "h_hzz2l2q", "h_hzz2q2nu", "h_hzz4nu", "h_hzz4q",
     "h_hzg_zll", "h_hzg_zqq", "h_hzg_znunu",
-    "h_ggf",
-    "h_ggf_htt", "h_ggf_hww", "h_ggf_hzz", "h_ggf_hbb", "h_ggf_hnonbb", "h_ggf_hcc",
-    "h_ggf_hzg", "h_ggf_hgg", "h_ggf_hmm",
-    "h_ggf_hwwqqlnu", "h_ggf_hww2l2nu", "h_ggf_hww4q",
-    "h_ggf_hzz4l", "h_ggf_hzz2l2nu", "h_ggf_hzz2l2q", "h_ggf_hzz2q2nu", "h_ggf_hzz4nu", "h_ggf_hzz4q",
-    "h_ggf_hzg_zll", "h_ggf_hzg_zqq", "h_ggf_hzg_znunu",
+    "h_ggf","h_ggf_tautau",
+    # "h_ggf_htt", "h_ggf_hww", "h_ggf_hzz", "h_ggf_hbb", "h_ggf_hnonbb", "h_ggf_hcc",
+    # "h_ggf_hzg", "h_ggf_hgg", "h_ggf_hmm",
+    # "h_ggf_hwwqqlnu", "h_ggf_hww2l2nu", "h_ggf_hww4q",
+    # "h_ggf_hzz4l", "h_ggf_hzz2l2nu", "h_ggf_hzz2l2q", "h_ggf_hzz2q2nu", "h_ggf_hzz4nu", "h_ggf_hzz4q",
+    # "h_ggf_hzg_zll", "h_ggf_hzg_zqq", "h_ggf_hzg_znunu",
     "h_vbf",
     "h_vbf_htt", "h_vbf_hww", "h_vbf_hzz", "h_vbf_hbb", "h_vbf_hnonbb", "h_vbf_hcc",
     "h_vbf_hzg", "h_vbf_hgg", "h_vbf_hmm",
@@ -508,56 +508,33 @@ h_ggf = h.add_process(
     id=11000,
     label=r"$H_{ggf}$",
     xsecs={
-        13: Number(4.858E+01, {
-            "pdf": 0.032j,
-            "th": (0.046j, 0.067j),
-            "th_gaussian": 0.039j,
-        }),
+        13: Number(48.68, { # value for mH=125 GeV
+            "pdf": 0.0185j,
+            "th": (0.0426j, 0.0648j),
+            "alpha_s": (0.0259j, 0.0262j)}
+        ),  # TODO
         13.6: Number(52.23, {  # value for mH=125 GeV
             "pdf": 0.032j,
             "th": (0.046j, 0.067j),
             "th_gaussian": 0.039,
         }),  # TODO: only preliminary
     },
-    aux={"production_mode_parent": h},
 )
 
-# Higgs decay channels
-h_ggf_htt = add_decay_process(h_ggf, h_decay_map.htt)
-h_ggf_hww = add_decay_process(h_ggf, h_decay_map.hww)
-h_ggf_hzz = add_decay_process(h_ggf, h_decay_map.hzz)
-h_ggf_hbb = add_decay_process(h_ggf, h_decay_map.hbb)
-h_ggf_hnonbb = add_decay_process(h_ggf, h_decay_map.hnonbb)
-h_ggf_hcc = add_decay_process(h_ggf, h_decay_map.hcc)
-h_ggf_hzg = add_decay_process(h_ggf, h_decay_map.hzg)
-h_ggf_hgg = add_decay_process(h_ggf, h_decay_map.hgg)
-h_ggf_hmm = add_decay_process(h_ggf, h_decay_map.hmm)
-
-# Higgs sub-decay channels
-# TODO: mapping of parent processes does not yet work here
-h_ggf_hwwqqlnu = add_sub_decay_process(h_ggf_hww, ww_decay_map["qqlnu"])
-h_ggf_hww2l2nu = add_sub_decay_process(h_ggf_hww, ww_decay_map["2l2nu"])
-h_ggf_hww4q = add_sub_decay_process(h_ggf_hww, ww_decay_map["4q"])
-h_ggf_hzz4l = add_sub_decay_process(h_ggf_hzz, zz_decay_map["4l"])
-h_ggf_hzz2l2nu = add_sub_decay_process(h_ggf_hzz, zz_decay_map["2l2nu"])
-h_ggf_hzz2l2q = add_sub_decay_process(h_ggf_hzz, zz_decay_map["2l2q"])
-h_ggf_hzz2q2nu = add_sub_decay_process(h_ggf_hzz, zz_decay_map["2q2nu"])
-h_ggf_hzz4nu = add_sub_decay_process(h_ggf_hzz, zz_decay_map["4nu"])
-h_ggf_hzz4q = add_sub_decay_process(h_ggf_hzz, zz_decay_map["4q"])
-h_ggf_hzg_zll = add_decay_process(h_ggf_hzg, hzg_decay_map["zll"])
-h_ggf_hzg_zqq = add_decay_process(h_ggf_hzg, hzg_decay_map["zqq"])
-h_ggf_hzg_znunu = add_decay_process(h_ggf_hzg, hzg_decay_map["znunu"])
-
-####################################################################################################
-#
-# vbf (qqH)
-#
-####################################################################################################
+h_ggf_tautau = h_ggf.add_process(
+    name="h_ggf_tautau",
+    id=11100,
+ #   xsecs={ecm: h_ggf.get_xsec(ecm) * const.br_h.tt for ecm in (13, 13.6)},
+    label=r"$H_{ggf} \rightarrow \tau\tau$",
+    xsecs={13.6 : h_ggf.get_xsec(13.6) * const.br_h.tt,
+           13   : h_ggf.get_xsec(13) * const.br_h.tt},
+)
 
 h_vbf = h.add_process(
     name="h_vbf",
     id=12000,
     label=r"$H_{vbf}$",
+
     xsecs={
         13: Number(3.782E+00, {
             "pdf": 0.021j,

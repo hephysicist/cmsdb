@@ -18,7 +18,7 @@ from order import Campaign
 campaign_run2_2017_nano_v9 = Campaign(
     name="run2_2017_nano_v9",
     id=220171,
-    ecm=13,
+    ecm=13.6,
     bx=25,
     aux={
         "tier": "NanoAOD",
