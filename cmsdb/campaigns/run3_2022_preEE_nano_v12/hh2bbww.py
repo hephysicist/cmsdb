@@ -54,3 +54,4 @@ cpn.add_dataset(
     n_events=86800,
     aux={"allow_uppercase_name": True},
 )
+

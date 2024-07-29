@@ -26,7 +26,7 @@ __all__ = [
 
 from order import Process
 from scinum import Number
-
+from scripts.get_x_secs import get_xsec_values,save_xsecs_to_file
 import cmsdb.constants as const
 from cmsdb.util import multiply_xsecs
 
@@ -39,8 +39,7 @@ from cmsdb.util import multiply_xsecs
 # cross sections correspond to mtop = 172.5 GeV
 # https://twiki.cern.ch/twiki/bin/view/CMS/TopMonteCarloSystematics?rev=7#mtop
 #
-
-
+kfactor_ttbar=923.6/762.1 # NLO->NNLO k-factor computed for 13.6 TeV
 tt = Process(
     name="tt",
     id=1000,
@@ -65,7 +64,8 @@ tt_sl = tt.add_process(
     id=1100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
-    xsecs=multiply_xsecs(tt, const.br_ww.sl),
+    xsecs= {13.6 : 334.8*kfactor_ttbar,}
+    # xsecs=multiply_xsecs(tt, const.br_ww.sl),
 )
 
 tt_dl = tt.add_process(
@@ -73,7 +73,8 @@ tt_dl = tt.add_process(
     id=1200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
-    xsecs=multiply_xsecs(tt, const.br_ww.dl),
+    xsecs = {13.6 : 80.9*kfactor_ttbar} ,
+    # xsecs=multiply_xsecs(tt, const.br_ww.dl),
 )
 
 tt_fh = tt.add_process(
@@ -81,7 +82,8 @@ tt_fh = tt.add_process(
     id=1300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
-    xsecs=multiply_xsecs(tt, const.br_ww.fh),
+    xsecs = {13.6 : 346.4*kfactor_ttbar},
+    # xsecs=multiply_xsecs(tt, const.br_ww.fh),
 )
 
 
@@ -101,7 +103,16 @@ st = Process(
     name="st",
     id=2000,
     label=r"Single $t$/$\bar{t}$",
-    color=(2, 210, 209),
+    xsecs={ #dunmmy x_sec
+    13: Number(833.9, {
+        "scale": (20.5, 30.0),
+        "pdf": 21.0,
+        "mtop": (23.2, 22.5),}),
+    13.6: Number(923.6, {
+        "scale": (22.6, 33.4),
+        "pdf": 22.8,
+        "mtop": (25.4, 24.6),}),},
+    color=(2, 210, 209),   
 )
 
 st_tchannel = st.add_process(
@@ -137,14 +148,14 @@ st_tchannel_t = st_tchannel.add_process(
             E_beam=0.2,
             integration=0.1,
         )),
-        13.6: Number(145.0, dict(
-            scale=(1.7, 1.1),
-            pdf=(2.3, 1.5),  # includes alpha_s
-            mtop=(1.3, 0.9),
-            E_beam=(0.4, 0.3),
-            integration=0.1,
-
-        )),
+        13.6 : 123.8,
+        # 13.6: Number(145.0, dict(
+        #     scale=(1.7, 1.1),
+        #     pdf=(2.3, 1.5),  # includes alpha_s
+        #     mtop=(1.3, 0.9),
+        #     E_beam=(0.4, 0.3),
+        #     integration=0.1,)),
+        
     },
 )
 
@@ -159,13 +170,14 @@ st_tchannel_tbar = st_tchannel.add_process(
             E_beam=(0.2, 0.1),
             integration=0.1,
         )),
-        13.6: Number(87.2, dict(
-            scale=(0.9, 0.8),
-            pdf=(1.5, 1.3),  # includes alpha_s
-            mtop=(0.6, 0.7),
-            E_beam=(0.2, 0.2),
-            integration=0.1,
-        )),
+        13.6 : 75.47,
+        # 13.6: Number(87.2, dict(
+        #     scale=(0.9, 0.8),
+        #     pdf=(1.5, 1.3),  # includes alpha_s
+        #     mtop=(0.6, 0.7),
+        #     E_beam=(0.2, 0.2),
+        #     integration=0.1,
+        # )),
     },
 )
 
@@ -197,19 +209,22 @@ st_twchannel_t = st_twchannel.add_process(
         13.6: st_twchannel.get_xsec(13.6) / 2,
     },
 )
+    # "TWminustoLNu2Q" : 15.8, 
+    # "TbarWplustoLNu2Q" : 15.9, 
 
 st_twchannel_t_sl = st_twchannel_t.add_process(
     name="st_twchannel_t_sl",
     id=2211,
-    xsecs=multiply_xsecs(st_twchannel_t, const.br_ww.sl),
+    xsecs={13.6 : 15.9}, 
+    # multiply_xsecs(st_twchannel_t, const.br_ww.sl),
 )
 
 st_twchannel_t_dl = st_twchannel_t.add_process(
     name="st_twchannel_t_dl",
     id=2212,
-    xsecs=multiply_xsecs(st_twchannel_t, const.br_ww.dl),
+    xsecs={13.6 : 3.8}, 
+    #multiply_xsecs(st_twchannel_t, const.br_ww.dl),
 )
-
 st_twchannel_t_fh = st_twchannel_t.add_process(
     name="st_twchannel_t_fh",
     id=2213,
@@ -228,13 +243,15 @@ st_twchannel_tbar = st_twchannel.add_process(
 st_twchannel_tbar_sl = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_sl",
     id=2221,
-    xsecs=multiply_xsecs(st_twchannel_tbar, const.br_ww.sl),
+    xsecs={13.6 : 15.9},
+    # multiply_xsecs(st_twchannel_tbar, const.br_ww.sl),
 )
 
 st_twchannel_tbar_dl = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_dl",
     id=2222,
-    xsecs=multiply_xsecs(st_twchannel_tbar, const.br_ww.dl),
+    xsecs= {13.6 : 3.8},
+    # multiply_xsecs(st_twchannel_tbar, const.br_ww.dl),
 )
 
 st_twchannel_tbar_fh = st_twchannel_tbar.add_process(
@@ -254,14 +271,12 @@ st_schannel = st.add_process(
             "mtop": (0.23, 0.22),
             "E_beam": 0.01,
         }),
-        13.6: Number(7.246, {
-            "scale": (0.059, 0.043),
+        13.6: Number(10.32, { #dummy  values copied by 13 TeV
+            "scale": (0.29, 0.24),
+            "pdf": 0.27,
+            "mtop": (0.23, 0.22),
+            "E_beam": 0.01,
         }),
-        # only scale uncertainty is given in the twiki
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
-        # TODO: update after final calculations
-        # no value for 13.6 in NLO twiki
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36
     },
 )
 
@@ -287,9 +302,12 @@ st_schannel_t = st_schannel.add_process(
             "mtop": (0.14, 0.13),
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
-        # not available yet in
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        13.6: Number(6.35, { #dummy  values copied by 13 TeV
+            "scale": (0.18, 0.15),
+            "pdf": 0.14,
+            "mtop": (0.14, 0.13),
+            "E_beam": 0.01,
+        }),
     },
 )
 
@@ -315,9 +333,12 @@ st_schannel_tbar = st_schannel.add_process(
             "mtop": 0.09,
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
-        # not available yet in
-        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        13.6: Number(3.97, { #dummy  values copied by 13 TeV
+            "scale": (0.11, 0.09),
+            "pdf": 0.15,
+            "mtop": 0.09,
+            "E_beam": 0.01,
+        }),
     },
 )
 
@@ -368,6 +389,7 @@ ttz = ttv.add_process(
             "scale": (0.086j, 0.095j),
             "pdf": 0.023j,
         }),
+        14: Number(1.045, { 
         # from xsdb for ttz_zqq: https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3D%5ETTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8%24  # noqa
         13.6: Number(0.660300, {
             "total": 0.003767,
@@ -535,3 +557,13 @@ ttvv.set_xsec(
     13,
     ttzz.get_xsec(13) + ttwz.get_xsec(13) + ttww.get_xsec(13),
 )
+
+
+# List of top-level processes
+processes = [tt, st, tt_fh, tt_dl, tt_sl, st_tchannel_t, st_tchannel_tbar, st_twchannel_t_sl, st_twchannel_tbar_sl, st_twchannel_t_dl, st_twchannel_tbar_dl, st_twchannel_t_fh, st_twchannel_tbar_fh]
+
+# Save the xsec values to 'top.txt' for energy 13.6 TeV
+save_xsecs_to_file(processes, 'top.txt', 13.6)
+
+
+# from IPython import embed; embed()
