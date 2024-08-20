@@ -26,7 +26,7 @@ __all__ = [
 
 from order import Process
 from scinum import Number
-from scripts.get_x_secs import get_xsec_values,save_xsecs_to_file
+#from scripts.get_x_secs import get_xsec_values,save_xsecs_to_file
 import cmsdb.constants as const
 from cmsdb.util import multiply_xsecs
 
@@ -558,9 +558,9 @@ ttvv.set_xsec(
 )
 
 
-# List of top-level processes
-processes = [tt, st, tt_fh, tt_dl, tt_sl, st_tchannel_t, st_tchannel_tbar, st_twchannel_t_sl, st_twchannel_tbar_sl, st_twchannel_t_dl, st_twchannel_tbar_dl, st_twchannel_t_fh, st_twchannel_tbar_fh]
+# # List of top-level processes
+# processes = [tt, st, tt_fh, tt_dl, tt_sl, st_tchannel_t, st_tchannel_tbar, st_twchannel_t_sl, st_twchannel_tbar_sl, st_twchannel_t_dl, st_twchannel_tbar_dl, st_twchannel_t_fh, st_twchannel_tbar_fh]
 
-# Save the xsec values to 'top.txt' for energy 13.6 TeV
-save_xsecs_to_file(processes, 'top.txt', 13.6)
+# # Save the xsec values to 'top.txt' for energy 13.6 TeV
+# save_xsecs_to_file(processes, 'top.txt', 13.6)
 

@@ -20,7 +20,7 @@ __all__ = [
 
 from order import Process
 from scinum import Number
-from scripts.get_x_secs import get_xsec_values,save_xsecs_to_file
+#from scripts.get_x_secs import get_xsec_values,save_xsecs_to_file
 import cmsdb.constants as const
 
 
