@@ -186,9 +186,9 @@ ww = vv.add_process(
         13.6 : Number(80.23*kfactor_ww),
     },
 )
-# List of top-level processes
-processes = [ww,zz,wz,dy_lep,wj]
+# # List of top-level processes
+# processes = [ww,zz,wz,dy_lep,wj]
 
-# Save the xsec values to 'top.txt' for energy 13.6 TeV
-save_xsecs_to_file(processes, 'wj.txt', 13.6)
+# # Save the xsec values to 'top.txt' for energy 13.6 TeV
+# save_xsecs_to_file(processes, 'wj.txt', 13.6)
 
