@@ -13,27 +13,36 @@ from cmsdb.campaigns.run3_2022_preEE_nano_tau_v12 import campaign_run3_2022_preE
 #
 
 cpn.add_dataset(
-    name='dy_incl',
+    name='dy_incl', #DYto2L_M-50
     id=2212016,
     is_data=False,
     processes=[procs.dy_lep],
     keys=['/DYto2L_M-50_madgraphMLM', '/DYto2L_M-50_madgraphMLM_ext1'],
-    n_files=63,
-    n_events=145286646.0,
+    n_files=32+31,
+    n_events=73914947+71371699,
     aux=None
 )
 
-cpn.add_dataset(
-    name='dy_lep_m10to50',
-    id=2212017,
-    is_data=False,
-    processes=[procs.dy_lep],
-    keys=['/DYto2L_M-10to50_amcatnloFXFX'],
-    n_files=15,
-    n_events=52629903.0,
-    aux=None
-)
-
+# cpn.add_dataset(
+#     name='dy_lep_m10to50',
+#     id=2212017,
+#     is_data=False,
+#     processes=[procs.dy_lep],
+#     keys=['/DYto2L_M-10to50_amcatnloFXFX'],
+#     n_files=15,
+#     n_events=52629903,
+#     aux=None
+# )
+# cpn.add_dataset(
+#     name='dy_lep_m10to50',
+#     id=2212017,
+#     is_data=False,
+#     processes=[procs.dy_lep_m10to50],
+#     keys=['/DYto2L_M-10to50_madgraphMLM'],
+#     n_files=32,
+#     n_events=163769744,
+#     aux=None,
+# )
 cpn.add_dataset(
     name='dy_lep_0j',
     id=2212018,
@@ -41,7 +50,7 @@ cpn.add_dataset(
     processes=[procs.dy_lep],
     keys=['/DYto2L_M-50_0J_amcatnloFXFX'],
     n_files=42,
-    n_events=83840818.0,
+    n_events=83840818,
     aux=None
 )
 
@@ -52,7 +61,7 @@ cpn.add_dataset(
     processes=[procs.dy_lep],
     keys=['/DYto2L_M-50_1J_amcatnloFXFX'],
     n_files=54,
-    n_events=46809421.0,
+    n_events=46809421,
     aux=None
 )
 
@@ -63,7 +72,7 @@ cpn.add_dataset(
     processes=[procs.dy_lep],
     keys=['/DYto2L_M-50_2J_amcatnloFXFX'],
     n_files=51,
-    n_events=23075468.0,
+    n_events=23075468,
     aux=None
 )
 
@@ -96,7 +105,7 @@ cpn.add_dataset(
     processes=[procs.ww],
     keys=['/WW'],
     n_files=5,
-    n_events=15405496.0,
+    n_events=15405496,
     aux=None
 )
 
@@ -118,7 +127,7 @@ cpn.add_dataset(
     processes=[procs.zz],
     keys=['/ZZ'],
     n_files=1,
-    n_events=1181750.0,
+    n_events=1181750,
     aux=None
 )
 

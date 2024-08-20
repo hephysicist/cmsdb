@@ -38,8 +38,8 @@ cpn.add_dataset(
 # cpn.add_dataset(
 #     name=['GluGluHto2Tau_M-100_2HDM-II'],
 #     id=70,
-#     processes=[procs.process_70],
-#     keys=['GluGluHto2Tau_M-100_2HDM-II'],
+#     processes=[procs.h_ggf_tautau],
+#     keys=['/GluGluHto2Tau_M-100_2HDM-II'],
 #     n_files=1,
 #     n_events=449942,
 #     aux={
@@ -98,8 +98,8 @@ cpn.add_dataset(
 # cpn.add_dataset(
 #     name=['GluGluHto2Tau_M-1200_2HDM-II'],
 #     id=75,
-#     processes=[procs.process_75],
-#     keys=['GluGluHto2Tau_M-1200_2HDM-II'],
+#     processes=[procs.h_ggf_tautau],
+#     keys=['/GluGluHto2Tau_M-1200_2HDM-II'],
 #     n_files=1,
 #     n_events=447983,
 #     aux={
@@ -122,7 +122,7 @@ cpn.add_dataset(
 # cpn.add_dataset(
 #     name=['GluGluHto2Tau_M-125_2HDM-II'],
 #     id=77,
-#     processes=[procs.process_77],
+#     processes=[procs.h_ggf_tautau],
 #     keys=['GluGluHto2Tau_M-125_2HDM-II'],
 #     n_files=1,
 #     n_events=447825,

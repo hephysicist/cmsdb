@@ -389,7 +389,6 @@ ttz = ttv.add_process(
             "scale": (0.086j, 0.095j),
             "pdf": 0.023j,
         }),
-        14: Number(1.045, { 
         # from xsdb for ttz_zqq: https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3D%5ETTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8%24  # noqa
         13.6: Number(0.660300, {
             "total": 0.003767,
@@ -398,7 +397,7 @@ ttz = ttv.add_process(
             "scale": (0.088j, 0.099j),
             "pdf": 0.031j,
         }),
-    },
+     },
 )
 
 # based on GenXSecAnalyzer
@@ -565,5 +564,3 @@ processes = [tt, st, tt_fh, tt_dl, tt_sl, st_tchannel_t, st_tchannel_tbar, st_tw
 # Save the xsec values to 'top.txt' for energy 13.6 TeV
 save_xsecs_to_file(processes, 'top.txt', 13.6)
 
-
-# from IPython import embed; embed()

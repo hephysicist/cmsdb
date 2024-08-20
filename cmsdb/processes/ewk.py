@@ -12,7 +12,7 @@ bound and exclusive in the upper bound, i.e. (a, b) means a <= x < b:
 """
 
 __all__ = [
-    "dy","dy_lep","dy_z2mumu","dy_z2tautau", "dy_z2ee",
+    "dy","dy_lep","dy_z2mumu","dy_z2ee", #,"dy_z2tautau","dy_lep_m10to50""dy_lowmass"
     "w","wj",
     "vv","ww","wz","zz"
 ]
@@ -51,32 +51,60 @@ dy_lep = dy.add_process(
         13.6: Number(5455.0*kfactor_dy)},
 )
 
+# dy_lep_m10to50 = dy.add_process(
+#     name="dy_lep_m10to50",
+#     id=50001,
+#     label=rf"{dy.label} $Z \rightarrow ll$",
+#     xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+#         13.6: Number(5455.0*kfactor_dy)},
+# )
+
+
 dy_z2mumu = dy_lep.add_process(
     name="dy_z2mumu",
     id=51001,
     label=rf"$Z \rightarrow \mu (\tau \rightarrow \mu$)",
-    xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
-           13.6: Number(5455.0*kfactor_dy)},
-     color=(150, 74, 139), # Medium Orchid
+    # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+    #        13.6: Number(5455.0*kfactor_dy)},
+    color="#94a4a2",
 )
 
-dy_z2tautau = dy_lep.add_process(
-    name="dy_z2tautau",
-    id=51002,
-    label=rf"$Z \rightarrow \tau_h (\tau \rightarrow \mu)$",
-    xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
-           13.6: Number(5455.0*kfactor_dy)},
-    color=(24, 69, 251),  # Royal Blue
-)
+# dy_z2tautau = dy_lep.add_process(
+#     name="dy_z2tautau",
+#     id=51002,
+#     label=rf"$Z \rightarrow \ell \tau_h$",
+#     xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+#            13.6: Number(5455.0*kfactor_dy)},
+#     #color="#e76300",
+# )
 
 dy_z2ee = dy_lep.add_process(
     name="dy_z2ee",
     id=51003,
-    label=rf"$Z \rightarrow \tau_h (\tau \rightarrow e)$",
-    xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
-           13.6: Number(5455.0*kfactor_dy)},
-    color=(201, 31, 22),  # Firebrick
+    label=rf"$Z \rightarrow e (\tau \rightarrow e)$",
+    # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+    #        13.6: Number(5455.0*kfactor_dy)},
+    color="#b9ac70",
 )
+
+dy_z2ll = dy_lep.add_process(
+    name="dy_z2ll",
+    id=51004,
+    label=rf"$Z \rightarrow \tau \tau$",
+    # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+    #        13.6: Number(5455.0*kfactor_dy)},
+   color="#832db6",
+)
+
+# dy_lowmass = dy_lep_m10to50.add_process(
+#     name="dy_lowmass",
+#     id=51005,
+#     label=rf"$Z \rightarrow \tau \tau (M-10to50)$",
+#     # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+#     #        13.6: Number(5455.0*kfactor_dy)},
+#      color="#b9ac70",
+# )
+
 
 #
 # W boson
@@ -164,5 +192,3 @@ processes = [ww,zz,wz,dy_lep,wj]
 # Save the xsec values to 'top.txt' for energy 13.6 TeV
 save_xsecs_to_file(processes, 'wj.txt', 13.6)
 
-
-# from IPython import embed; embed()
