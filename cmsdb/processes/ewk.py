@@ -79,24 +79,24 @@ dy_lep = dy.add_process(
 # )
 dy_z2mumu = dy_lep.add_process(
     name="dy_z2mumu",
-    id=51001,
-    label=rf"({dy.label} $Z \rightarrow \mu (\tau \rightarrow \mu$)",
+    id=51004,
+    label=rf"$Z \rightarrow \mu (\tau \rightarrow \mu$)",
     xsecs={13.6: Number(5455.0*kfactor_dy)},
     color=(51,153,204),
 )
 
-dy_z2tautau = dy_lep.add_process(
-    name="dy_z2tautau",
-    id=51002,
-    label=rf"({dy.label} $Z \rightarrow \tau_h (\tau \rightarrow \mu)$",
-    xsecs={13.6: Number(5455.0*kfactor_dy)},
-    color=(255,204,102),
-)
+# dy_z2tautau = dy_lep.add_process(
+#     name="dy_z2tautau",
+#     id=51002,
+#     label=rf"{dy.label} $Z \rightarrow \tau_h (\tau \rightarrow \mu$",
+#     xsecs={13.6: Number(5455.0*kfactor_dy)},
+#     color=(255,204,102),
+# )
 
 
 dy_z2ee = dy_lep.add_process(
     name="dy_z2ee",
-    id=51003,
+    id=51001,
     label=rf"$Z \rightarrow e (\tau \rightarrow e)$",
     # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
     #        13.6: Number(5455.0*kfactor_dy)},
@@ -105,7 +105,7 @@ dy_z2ee = dy_lep.add_process(
 
 dy_z2ll = dy_lep.add_process(
     name="dy_z2ll",
-    id=51004,
+    id=51005,
     label=rf"$Z \rightarrow \tau \tau$",
     # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
     #        13.6: Number(5455.0*kfactor_dy)},
