@@ -112,7 +112,7 @@ st = Process(
         "scale": (22.6, 33.4),
         "pdf": 22.8,
         "mtop": (25.4, 24.6),}),},
-    color=(2, 210, 209),   
+    color="#66d2ff",   
 )
 
 st_tchannel = st.add_process(
