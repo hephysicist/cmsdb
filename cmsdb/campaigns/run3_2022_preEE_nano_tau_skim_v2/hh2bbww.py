@@ -5,7 +5,7 @@ HH -> bbWW datasets for the 2022 pre-EE data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
+from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_preEE_nano_tau_skim_v2 as cpn
 
 #
 # ggf, HH -> bbVV inclusive
@@ -54,4 +54,3 @@ cpn.add_dataset(
     n_events=86800,
     aux={"allow_uppercase_name": True},
 )
-
