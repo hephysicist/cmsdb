@@ -80,6 +80,7 @@ qcd = Process(
     id=30000,
     label="QCD",
     xsecs={13: Number(0.1)},  # TODO
+    color="#ffccff"
 )
 
 

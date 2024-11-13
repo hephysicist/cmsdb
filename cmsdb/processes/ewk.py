@@ -12,7 +12,7 @@ bound and exclusive in the upper bound, i.e. (a, b) means a <= x < b:
 """
 
 __all__ = [
-    "dy","dy_lep","dy_z2mumu","dy_z2ee", #,"dy_z2tautau","dy_lep_m10to50""dy_lowmass"
+    "dy","dy_lep","dy_z2mumu","dy_z2ee","dy_z2tautau",#,"dy_lep_m10to50""dy_lowmass"
     "w","wj",
     "vv","ww","wz","zz"
 ]
@@ -46,9 +46,31 @@ dy = Process(
 dy_lep = dy.add_process(
     name="dy_lep",
     id=51000,
-    label=rf"{dy.label} $Z \rightarrow ll$",
+    label=rf"$Z \rightarrow ll$",
     xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
         13.6: Number(5455.0*kfactor_dy)},
+)
+dy_z2ee = dy_lep.add_process(
+    name="dy_z2ee",
+    id=51001,
+    label=rf"$Z \rightarrow ee$",
+    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    color="#b9ac70",
+)
+dy_z2mumu = dy_lep.add_process(
+    name="dy_z2mumu",
+    id=51004,
+    label=rf"$Z \rightarrow \mu\mu$",
+    xsecs={13.6: Number(5455.0*kfactor_dy)},
+   color="#3399cc",
+)
+
+dy_z2tautau = dy_lep.add_process(
+    name="dy_z2tautau",
+    id=51005,
+    label=rf"$Z \rightarrow \tau\tau$+jet fakes",
+    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    color="#a172bd",
 )
 
 # dy_lep_m10to50 = dy.add_process(
@@ -77,40 +99,27 @@ dy_lep = dy.add_process(
 #            13.6: Number(5455.0*kfactor_dy)},
 #     #color="#e76300",
 # )
-dy_z2mumu = dy_lep.add_process(
-    name="dy_z2mumu",
-    id=51001,
-    label=rf"({dy.label} $Z \rightarrow \mu (\tau \rightarrow \mu$)",
-    xsecs={13.6: Number(5455.0*kfactor_dy)},
-    color=(51,153,204),
-)
-
-dy_z2tautau = dy_lep.add_process(
-    name="dy_z2tautau",
-    id=51002,
-    label=rf"({dy.label} $Z \rightarrow \tau_h (\tau \rightarrow \mu)$",
-    xsecs={13.6: Number(5455.0*kfactor_dy)},
-    color=(255,204,102),
-)
 
 
-dy_z2ee = dy_lep.add_process(
-    name="dy_z2ee",
-    id=51003,
-    label=rf"$Z \rightarrow e (\tau \rightarrow e)$",
-    # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
-    #        13.6: Number(5455.0*kfactor_dy)},
-    color="#b9ac70",
-)
+# dy_z2tautau = dy_lep.add_process(
+#     name="dy_z2tautau",
+#     id=51002,
+#     label=rf"({dy.label} $Z \rightarrow \tau_h (\tau \rightarrow \mu)$",
+#     xsecs={13.6: Number(5455.0*kfactor_dy)},
+#     color=(255,204,102),
+# )
 
-dy_z2ll = dy_lep.add_process(
-    name="dy_z2ll",
-    id=51004,
-    label=rf"$Z \rightarrow \tau \tau$",
-    # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
-    #        13.6: Number(5455.0*kfactor_dy)},
-   color="#832db6",
-)
+
+# dy_z2ee = dy_lep.add_process(
+#     name="dy_z2ee",
+#     id=51003,
+#     label=rf"$Z \rightarrow e (\tau \rightarrow e)$",
+#     # xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
+#     #        13.6: Number(5455.0*kfactor_dy)},
+#     color="#b9ac70",
+# )
+
+
 
 # dy_lowmass = dy_lep_m10to50.add_process(
 #     name="dy_lowmass",
@@ -156,6 +165,7 @@ wj = w.add_process(
         13.6: 55300.*kfactor_wj, 
             #wm_lnu_xs_13p6 + wp_lnu_xs_13p6,
     },
+    color="#c95954"
 )
 
 #
@@ -167,6 +177,7 @@ vv = Process(
     id=8000,
     label="Di-Boson",
     xsecs={13.6: Number(0.1)},  # TODO
+    color="#7aee7a"
 )
 
 # ZZ 13 TeV xsec values at nNNLO from
