@@ -44,7 +44,6 @@ tt = Process(
     name="tt",
     id=1000,
     label=r"$t\bar{t}$ + Jets",
-    color=(205, 0, 9),
     xsecs={
         13: Number(833.9, {
             "scale": (20.5, 30.0),
@@ -57,6 +56,7 @@ tt = Process(
             "mtop": (25.4, 24.6),
         }),
     },
+    color="#ffcc66"
 )
 
 tt_sl = tt.add_process(

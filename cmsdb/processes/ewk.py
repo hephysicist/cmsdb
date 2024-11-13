@@ -46,9 +46,31 @@ dy = Process(
 dy_lep = dy.add_process(
     name="dy_lep",
     id=51000,
-    label=rf"{dy.label} $Z \rightarrow ll$",
+    label=rf"$Z \rightarrow ll$",
     xsecs={13: Number(5455.0*kfactor_dy), #FIXME Add proper number for 13TeV
         13.6: Number(5455.0*kfactor_dy)},
+)
+dy_z2ee = dy_lep.add_process(
+    name="dy_z2ee",
+    id=51001,
+    label=rf"$Z \rightarrow ee$",
+    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    color="#b9ac70",
+)
+dy_z2mumu = dy_lep.add_process(
+    name="dy_z2mumu",
+    id=51004,
+    label=rf"$Z \rightarrow \mu\mu$",
+    xsecs={13.6: Number(5455.0*kfactor_dy)},
+   color="#3399cc",
+)
+
+dy_z2tautau = dy_lep.add_process(
+    name="dy_z2tautau",
+    id=51005,
+    label=rf"$Z \rightarrow \tau\tau$+jet fakes",
+    xsecs={13.6: Number(5455.0*kfactor_dy)},
+    color="#a172bd",
 )
 
 # dy_lep_m10to50 = dy.add_process(
@@ -156,6 +178,7 @@ wj = w.add_process(
         13.6: 55300.*kfactor_wj, 
             #wm_lnu_xs_13p6 + wp_lnu_xs_13p6,
     },
+    color="#c95954"
 )
 
 #
@@ -167,6 +190,7 @@ vv = Process(
     id=8000,
     label="Di-Boson",
     xsecs={13.6: Number(0.1)},  # TODO
+    color="#7aee7a"
 )
 
 # ZZ 13 TeV xsec values at nNNLO from
