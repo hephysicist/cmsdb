@@ -13,6 +13,7 @@ campaign_run3_2022_preEE_nano_tau_v12 = Campaign(
         "year": 2022,
         "version": 12,
         "tag": "preEE",
+        "run": 3,
         "custom": {
             "name": "run3_2022_preEE_nano_tau_v12",
             "creator": "desy",

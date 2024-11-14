@@ -5,8 +5,8 @@ Data process definitions.
 """
 
 __all__ = [
-    "data", "data_e", "data_mu",
-    "data_tau", "data_met", "data_pho",
+    "data", "data_e", "data_mu", "data_singlemu",
+    "data_tau", "data_met", "data_pho", 
     "data_egamma", "data_muoneg", "data_jetht",
 ]
 
@@ -37,6 +37,13 @@ data_mu = data.add_process(
     id=20,
     is_data=True,
     label=r"Data $\mu$",
+)
+
+data_singlemu = data.add_process(
+    name="data_singlemu",
+    id=25,
+    is_data=True,
+    label=r"Data Single $\mu$",
 )
 
 data_tau = data.add_process(
