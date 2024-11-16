@@ -89,7 +89,22 @@ cpn.add_dataset(
     n_events=3762818+3999850,
     aux=None
 )
-
+cpn.add_dataset(
+    name="st_schannel_t",
+    id=22120126,
+    processes=[procs.st_schannel_t],
+    keys=['/ST_s_channel_top_4f_leptonDecays'],
+    n_files=2,
+    n_events=781538,
+)
+cpn.add_dataset(
+    name="st_schannel_tbar",
+    id=22120127,
+    processes=[procs.st_schannel_tbar],
+    keys=['/ST_s_channel_antitop_4f_leptonDecays'],
+    n_files=1,
+    n_events=484738,
+)
 ### TT SAMPLES ###
 
 cpn.add_dataset(
@@ -123,23 +138,6 @@ cpn.add_dataset(
 )
 
 
-# cpn.add_dataset(
-#     name="dataset_26",
-#     id=26,
-#     processes=[procs.process_26],
-#     keys=['ST_s_channel_antitop_4f_leptonDecays'],
-#     n_files=1,
-#     n_events=484738.0,
-# )
-
-# cpn.add_dataset(
-#     name="dataset_27",
-#     id=27,
-#     processes=[procs.process_27],
-#     keys=['ST_s_channel_top_4f_leptonDecays'],
-#     n_files=2,
-#     n_events=781538.0,
-# )
 
 # cpn.add_dataset(
 #     name="dataset_40",
