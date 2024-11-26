@@ -7,8 +7,8 @@ from cmsdb.campaigns.run3_2022_postEE_v2_nano_tau_v14 import campaign_run3_2022_
 cpn.add_dataset(
         name="wj_incl_madgraph",
         id=220113368,
-        is_mc=True,
-        processes=[procs.wj_incl],
+#        is_mc=True,
+        processes=[procs.wj],
         keys=["/WtoLNu_madgraphMLM","/WtoLNu_madgraphMLM_ext1",],
         n_files=344,
         n_events=683448011,
@@ -17,7 +17,7 @@ cpn.add_dataset(
 cpn.add_dataset(
         name="dy_lep_madgraph",
         id=220154049,
-        is_mc=True,
+#        is_mc=True,
         processes=[procs.dy_lep],
         keys=["/DYto2L_M_50_madgraphMLM","/DYto2L_M_50_madgraphMLM_ext1",],
         n_files=464,
@@ -27,7 +27,7 @@ cpn.add_dataset(
 cpn.add_dataset(
         name="ww",
         id=220144633,
-        is_mc=True,
+#        is_mc=True,
         processes=[procs.ww],
         keys=["/WW",],
         n_files=34,
@@ -37,7 +37,7 @@ cpn.add_dataset(
 cpn.add_dataset(
         name="wz",
         id=220150919,
-        is_mc=True,
+#        is_mc=True,
         processes=[procs.wz],
         keys=["/WZ",],
         n_files=17,
@@ -47,7 +47,7 @@ cpn.add_dataset(
 cpn.add_dataset(
         name="zz",
         id=220134326,
-        is_mc=True,
+#        is_mc=True,
         processes=[procs.zz],
         keys=["/ZZ",],
         n_files=3,
