@@ -90,17 +90,17 @@ cpn.add_dataset(
     aux=None
 )
 cpn.add_dataset(
-    name="st_schannel_t",
+    name="st_schannel_t_lep",
     id=22120126,
-    processes=[procs.st_schannel_t],
+    processes=[procs.st_schannel_t_lep],
     keys=['/ST_s_channel_top_4f_leptonDecays'],
     n_files=2,
     n_events=781538,
 )
 cpn.add_dataset(
-    name="st_schannel_tbar",
+    name="st_schannel_tbar_lep",
     id=22120127,
-    processes=[procs.st_schannel_tbar],
+    processes=[procs.st_schannel_tbar_lep],
     keys=['/ST_s_channel_antitop_4f_leptonDecays'],
     n_files=1,
     n_events=484738,
