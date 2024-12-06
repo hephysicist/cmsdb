@@ -17,7 +17,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_
 
 
 cpn.add_dataset(
-    name='dy_incl', #DYto2L_M-50
+    name='dy_lep_madgraph', #DYto2L_M-50
     id=2212016,
     processes=[procs.dy_lep],
     keys=['/DYto2L_M_50_madgraphMLM', '/DYto2L_M_50_madgraphMLM_ext1'],
@@ -27,7 +27,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='wj_incl',
+    name='wj_incl_madgraph',
     id=414,
     processes=[procs.wj],
     keys=['/WtoLNu_madgraphMLM','/WtoLNu_madgraphMLM_ext1'],
