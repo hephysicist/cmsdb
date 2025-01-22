@@ -20,7 +20,7 @@ cpn.add_dataset(
     processes=[procs.data_e],
     keys=['/EGamma0_Run2023D_v1', '/EGamma0_Run2023D_v2', '/EGamma1_Run2023D_v1', '/EGamma1_Run2023D_v2'],
     n_files=64 + 14 + 64 + 14,
-    n_events= 49635861 + 10741086 + 49626665 + 10743629, 
+    n_events= 105892646 + 22657211 + 105850543 + 22653287,
     aux={
         'era': 'D'
     }
@@ -34,7 +34,7 @@ cpn.add_dataset(
     processes=[procs.data_mu],
     keys=['/Muon0_Run2023D_v1', '/Muon0_Run2023D_v2', '/Muon1_Run2023D_v1', '/Muon1_Run2023D_v2'],
     n_files= 53 + 12 + 53 + 12,
-    n_events= 50726971 + 11041859 + 50772523 + 11045936,
+    n_events= 100211533 + 21462916 + 100281976 + 21463645,
     aux={
         'era': 'D'
     }
@@ -47,7 +47,7 @@ cpn.add_dataset(
     processes=[procs.data_tau],
     keys=['/Tau_Run2023D_v1', '/Tau_Run2023D_v2'],
     n_files=31 + 7,
-    n_events= 22751203 + 5089799,
+    n_events= 32092659 + 7246202,
     aux={
         'era': 'D',
     }
