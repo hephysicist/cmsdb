@@ -15,7 +15,7 @@ cpn.add_dataset(
     processes=[procs.st_tchannel_t],
     keys=['/ST_t_channel_top_4f_InclusiveDecays'],
     n_files=6,
-    n_events=2242994,
+    n_events=5908000,
     aux=None
 )
 
@@ -26,7 +26,7 @@ cpn.add_dataset(
     processes=[procs.st_tchannel_tbar],
     keys=['/ST_t_channel_antitop_4f_InclusiveDecays'],
     n_files=3,
-    n_events=1106961,
+    n_events=2878000,
     aux=None
 )
 
@@ -36,7 +36,7 @@ cpn.add_dataset(
     processes=[procs.st_twchannel_t_sl],
     keys=['/ST_tW_top_LNu2Q'],
     n_files=18,
-    n_events=7590122,
+    n_events=9650268,
     aux=None
 )
 
@@ -46,7 +46,7 @@ cpn.add_dataset(
     processes=[procs.st_twchannel_t_dl],
     keys=['/ST_tW_top_2L2Nu'],
     n_files=10,
-    n_events=4454589,
+    n_events=4985000,
     aux=None
 )
 
@@ -57,7 +57,7 @@ cpn.add_dataset(
     processes=[procs.st_twchannel_t_fh],
     keys=['/ST_tW_top_4Q'],
     n_files=9,
-    n_events=3033233,
+    n_events=7919000,
     aux=None
 )
 
@@ -67,7 +67,7 @@ cpn.add_dataset(
     processes=[procs.st_twchannel_tbar_sl],
     keys=['/ST_tW_antitop_LNu2Q'],
     n_files=17,
-    n_events=7488647,
+    n_events=9519385,
     aux=None
 )
 
@@ -77,7 +77,7 @@ cpn.add_dataset(
     processes=[procs.st_twchannel_tbar_dl],
     keys=['/ST_tW_antitop_2L2Nu'],
     n_files=10,
-    n_events=4385641,
+    n_events=4907000,
     aux=None
 )
 
@@ -87,7 +87,7 @@ cpn.add_dataset(
     processes=[procs.st_twchannel_tbar_fh],
     keys=['/ST_tW_antitop_4Q'],
     n_files=9,
-    n_events=3054459,
+    n_events=7970000,
     aux=None
 )
 cpn.add_dataset(
@@ -96,7 +96,7 @@ cpn.add_dataset(
     processes=[procs.st_schannel_t_lep],
     keys=['/ST_s_channel_top_4f_leptonDecays'],
     n_files=4,
-    n_events=1446621,
+    n_events=2588000,
 )
 cpn.add_dataset(
     name="st_schannel_tbar_lep",
@@ -104,7 +104,7 @@ cpn.add_dataset(
     processes=[procs.st_schannel_tbar_lep],
     keys=['/ST_s_channel_antitop_4f_leptonDecays'],
     n_files=2,
-    n_events=895742,
+    n_events=1600000,
 )
 ### TT SAMPLES ###
 
@@ -114,7 +114,7 @@ cpn.add_dataset(
     processes=[procs.tt_sl],
     keys=['/TTtoLNu2Q'],
     n_files= 318,
-    n_events= 125809500,
+    n_events= 152653000,
     aux=None
 )
 
@@ -124,7 +124,7 @@ cpn.add_dataset(
     processes=[procs.tt_dl],
     keys=['/TTto2L2Nu'],
     n_files=111,
-    n_events=44488239,
+    n_events=48104000,
     aux=None
 )
 
@@ -134,7 +134,7 @@ cpn.add_dataset(
     processes=[procs.tt_fh],
     keys=['/TTto4Q'],
     n_files=142,
-    n_events=46072091,
+    n_events=104963000,
     aux=None
 )
 

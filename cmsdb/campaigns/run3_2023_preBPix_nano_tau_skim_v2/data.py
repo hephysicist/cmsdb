@@ -18,7 +18,7 @@ cpn.add_dataset(
     processes=[procs.data_e],
     keys=['/EGamma0_Run2023C_v1', '/EGamma0_Run2023C_v2', '/EGamma0_Run2023C_v3', '/EGamma1_Run2023C_v1', '/EGamma1_Run2023C_v2', '/EGamma1_Run2023C_v3'],
     n_files=38 + 11 + 13 + 38 + 11 + 13,
-    n_events=30038670 + 7890231 + 9817005 + 30010181 + 7891642 + 9818391,
+    n_events= 67598081 + 17233307 + 21993048 + 67530273 + 17230822 + 21987586, 
     aux={
         'era': 'C',
         'jec_era': 'Cv123'
@@ -32,7 +32,7 @@ cpn.add_dataset(
     processes=[procs.data_e],
     keys=['/EGamma0_Run2023C_v4', '/EGamma1_Run2023C_v4'],
     n_files=94 + 94,
-    n_events= 72118251 + 72080022,
+    n_events= 160108119 + 159997174,
     aux={
         'era': 'C',
         'jec_era': 'Cv4'
@@ -46,7 +46,7 @@ cpn.add_dataset(
     processes=[procs.data_mu],
     keys=['/Muon0_Run2023C_v1', '/Muon0_Run2023C_v2', '/Muon0_Run2023C_v3', '/Muon1_Run2023C_v1', '/Muon1_Run2023C_v2', '/Muon1_Run2023C_v3'],
     n_files=27 + 9 + 11 + 27 + 9 + 11,
-    n_events= 25754131 + 8049224 + 9788396 + 25717768 + 8050781 + 9787601 ,
+    n_events= 54715896 + 17063451 + 20015377 + 54621922 + 17059895 + 20010429,
     aux={
         'era': 'C',
         'jec_era': 'Cv123'
@@ -61,7 +61,7 @@ cpn.add_dataset(
     processes=[procs.data_mu],
     keys=['/Muon0_Run2023C_v4', '/Muon1_Run2023C_v4'],
     n_files= 75 + 75,
-    n_events= 71162252 + 71111717,
+    n_events= 138943783 + 138834244,
     aux={
         'era': 'C',
         'jec_era': 'Cv4'
@@ -76,7 +76,7 @@ cpn.add_dataset(
     processes=[procs.data_tau],
     keys=['/Tau_Run2023C_v1', '/Tau_Run2023C_v2', '/Tau_Run2023C_v3'],
     n_files=15 + 5 + 7,
-    n_events=10255817 + 3607056 + 4585815,
+    n_events= 14484171 + 5178955 + 6470602,
     aux={
         'era': 'C',
         'jec_era': 'Cv123'
@@ -92,7 +92,7 @@ cpn.add_dataset(
     processes=[procs.data_tau],
     keys=['/Tau_Run2023C_v4'],
     n_files= 45,
-    n_events= 32314548,
+    n_events= 45176805,
     aux={
         'era': 'C',
         'jec_era': 'Cv4'

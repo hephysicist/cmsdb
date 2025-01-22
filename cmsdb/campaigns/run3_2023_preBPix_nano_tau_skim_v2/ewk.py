@@ -23,7 +23,7 @@ cpn.add_dataset(
     processes=[procs.dy_lep],
     keys=['/DYto2L_M_50_madgraphMLM'],
     n_files=128,
-    n_events=69079056,
+    n_events=130559088,
     aux=None
 )
 
@@ -33,7 +33,7 @@ cpn.add_dataset(
     processes=[procs.wj],
     keys=['/WtoLNu_madgraphMLM'],
     n_files=104,
-    n_events=38471437,
+    n_events=191075090,
     aux=None,
 )
 
@@ -43,7 +43,7 @@ cpn.add_dataset(
     processes=[procs.ww],
     keys=['/WW'],
     n_files=24,
-    n_events=13287890,
+    n_events=33507000,
     aux=None
 )
 
@@ -53,7 +53,7 @@ cpn.add_dataset(
     processes=[procs.wz],
     keys=['/WZ'],
     n_files=12,
-    n_events=5903382,
+    n_events=16770000,
     aux=None
 )
 
@@ -63,7 +63,7 @@ cpn.add_dataset(
     processes=[procs.zz],
     keys=['/ZZ'],
     n_files=2,
-    n_events=799062,
+    n_events=2517000,
     aux=None
 )
 
