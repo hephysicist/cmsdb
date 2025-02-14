@@ -74,6 +74,13 @@ from scinum import Number
 #
 # QCD
 #
+jet_fakes = Process(
+    name="jet_fakes",
+    id=32000,
+    label="j+fakes",
+    xsecs={13: Number(0.1)},  # TODO
+    color="#f65e7c"
+)
 
 qcd = Process(
     name="qcd",
