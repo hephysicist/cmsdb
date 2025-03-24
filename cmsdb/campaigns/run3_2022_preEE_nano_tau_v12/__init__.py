@@ -25,4 +25,4 @@ campaign_run3_2022_preEE_nano_tau_v12 = Campaign(
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_v12.ewk
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_v12.data
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_v12.top
-#import cmsdb.campaigns.run3_2022_preEE_nano_tau_v12.signal
+import cmsdb.campaigns.run3_2022_preEE_nano_tau_v12.higgs

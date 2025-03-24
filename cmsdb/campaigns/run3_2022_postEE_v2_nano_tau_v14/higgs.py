@@ -7,7 +7,6 @@ from cmsdb.campaigns.run3_2022_postEE_v2_nano_tau_v14 import campaign_run3_2022_
 cpn.add_dataset(
         name="h_ggf_htt_filtered",
         id=220136895,
-        is_mc=True,
         processes=[procs.h_ggf_htt],
         keys=["/GluGluHTo2Tau_UncorrelatedDecay_Filtered",],
         n_files=32,
@@ -17,7 +16,6 @@ cpn.add_dataset(
 cpn.add_dataset(
         name="h_ggf_htt_unfiltered",
         id=220178223,
-        is_mc=True,
         processes=[procs.h_ggf_htt],
         keys=["/GluGluHTo2Tau_UncorrelatedDecay_UnFiltered",],
         n_files=1,
