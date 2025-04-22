@@ -99,3 +99,30 @@ cpn.add_dataset(
     }
 )
 
+cpn.add_dataset(
+    name='data_egamma_Cv123',
+    id=2211984,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=['/MuonEG_Run2023C_v1','/MuonEG_Run2023C_v2','/MuonEG_Run2023C_v3','/MuonEG_Run2023C_v4'],
+    n_files= 9 + 3 + 3,
+    n_events= 9772655 + 2735170 + 3502967,
+    aux={
+        'era': 'C',
+        'jec_era': 'Cv123',
+    }
+)
+
+cpn.add_dataset(
+    name='data_egamma_Cv4',
+    id=2211985,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=['/MuonEG_Run2023C_v4'],
+    n_files=21,
+    n_events=24205121 ,
+    aux={
+        'era': 'C',
+        'jec_era': 'Cv4',
+    }
+)
