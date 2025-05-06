@@ -1,34 +1,37 @@
 # coding: utf-8
 
 """
-CMS datasets from the 2022 post-EE data-taking campaign
+CMS datasets from the 2022 pre-EE data-taking campaign
 """
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_preEE_nano_tau_skim_v2 as cpn
 
 cpn.add_dataset(
-    name='glugluhto2tau_uncorrelateddecay_unfiltered',
-    id=11100,
-    is_data=True,
-    processes=[procs.data_glugluhto2tau],
-    keys=['/GluGluHTo2Tau_UncorrelatedDecay_UnFiltered'],
+    name="h_tt_100",
+    id=100,
+    processes=[procs.h_ggf_htt],
+    keys=['/GluGluHto2Tau_M_100_2HDM_II'],
     n_files=1,
-    n_events=199291.0,
+    n_events=449942,
+)
+cpn.add_dataset(
+    name="h_tt_125",
+    id=125,
+    processes=[procs.h_ggf_htt],
+    keys=['/GluGluHto2Tau_M_125_2HDM_II'],
+    n_files=1,
+    n_events=447825.0,
+)
+cpn.add_dataset(
+    name="h_tt_1200",
+    id=1200,
+    processes=[procs.h_ggf_htt],
+    keys=['/GluGluHto2Tau_M_1200_2HDM_II'],
+    n_files=2,
+    n_events=447983,
 )
 
-
-# cpn.add_dataset(
-#     name="signal",
-#     id=11100,
-#     processes=[procs.h_ggf_tautau],
-#     keys=['/GluGluHToTauTau_M125'],
-#     n_files=1,
-#     n_events=295692,
-#     aux={
-#         "require_triggers"  : ["IsoMu24",]
-#     },
-# )
 # cpn.add_dataset(
 #     name=['GluGluHto2Tau_M-1000_2HDM-II'],
 #     id=69,
@@ -36,21 +39,17 @@ cpn.add_dataset(
 #     keys=['GluGluHto2Tau_M-1000_2HDM-II'],
 #     n_files=1,
 #     n_events=446596,
-#     aux={
-#         "require_triggers"  : ["IsoMu24",]
-#     },
 # )
 
+
 # cpn.add_dataset(
-#     name=['GluGluHto2Tau_M-100_2HDM-II'],
-#     id=70,
-#     processes=[procs.h_ggf_tautau],
-#     keys=['/GluGluHto2Tau_M-100_2HDM-II'],
+#     name='glugluhto2tau_uncorrelateddecay_unfiltered',
+#     id=11100,
+#     is_data=True,
+#     processes=[procs.data_glugluhto2tau],
+#     keys=['/GluGluHTo2Tau_UncorrelatedDecay_UnFiltered'],
 #     n_files=1,
-#     n_events=449942,
-#     aux={
-#         "require_triggers"  : ["IsoMu24",]
-#     },
+#     n_events=199291.0,
 # )
 
 # cpn.add_dataset(
@@ -101,17 +100,7 @@ cpn.add_dataset(
 #     },
 # )
 
-# cpn.add_dataset(
-#     name=['GluGluHto2Tau_M-1200_2HDM-II'],
-#     id=75,
-#     processes=[procs.h_ggf_tautau],
-#     keys=['/GluGluHto2Tau_M-1200_2HDM-II'],
-#     n_files=1,
-#     n_events=447983,
-#     aux={
-#         "require_triggers"  : ["IsoMu24",]
-#     },
-# )
+
 
 # cpn.add_dataset(
 #     name=['GluGluHto2Tau_M-120_2HDM-II'],

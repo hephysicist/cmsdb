@@ -102,3 +102,42 @@ cpn.add_dataset(
         n_events=76689396,
     aux={"era": "G"},
     )
+
+cpn.add_dataset(
+    name='data_egamma_E',
+    id=2212004,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=['/MuonEG_Run2022E'],
+    n_files=10,
+    n_events=12868267,
+    aux={
+        'era': 'E'
+    }
+)
+
+cpn.add_dataset(
+    name='data_egamma_F',
+    id=2212005,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=['/MuonEG_Run2022F'],
+    n_files=31,
+    n_events=38159099,
+    aux={
+        'era': 'F'
+    }
+)
+
+cpn.add_dataset(
+    name='data_egamma_G',
+    id=2212006,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=['/MuonEG_Run2022G'],
+    n_files=5,
+    n_events=6238527,
+    aux={
+        'era': 'G'
+    }
+)

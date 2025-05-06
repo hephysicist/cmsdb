@@ -53,3 +53,16 @@ cpn.add_dataset(
     }
 )
 
+cpn.add_dataset(
+    name='data_egamma_D',
+    id=2211984,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=['/MuonEG_Run2023D_v1','/MuonEG_Run2023D_v2'],
+    n_files=16 + 4,
+    n_events=17530531 + 3751587,
+    aux={
+        'era': 'D'
+    }
+)
+
