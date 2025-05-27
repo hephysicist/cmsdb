@@ -12,10 +12,10 @@ CMS datasets from the 2023 preBPix data-taking campaign /eos/cms/store/group/phy
 """
 
 cpn.add_dataset(
-    name='data_e_Cv123',
+    name='data_egamma_Cv123',
     id=2212010,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=['/EGamma0_Run2023C_v1', '/EGamma0_Run2023C_v2', '/EGamma0_Run2023C_v3', '/EGamma1_Run2023C_v1', '/EGamma1_Run2023C_v2', '/EGamma1_Run2023C_v3'],
     n_files=38 + 11 + 13 + 38 + 11 + 13,
     n_events= 67598081 + 17233307 + 21993048 + 67530273 + 17230822 + 21987586, 
@@ -26,10 +26,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='data_e_Cv4',
+    name='data_egamma_Cv4',
     id=221201001,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=['/EGamma0_Run2023C_v4', '/EGamma1_Run2023C_v4'],
     n_files=94 + 94,
     n_events= 160108119 + 159997174,
@@ -100,10 +100,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='data_egamma_Cv123',
+    name='data_muoneg_Cv123',
     id=2211984,
     is_data=True,
-    processes=[procs.data_egamma],
+    processes=[procs.data_muoneg],
     keys=['/MuonEG_Run2023C_v1','/MuonEG_Run2023C_v2','/MuonEG_Run2023C_v3','/MuonEG_Run2023C_v4'],
     n_files= 9 + 3 + 3,
     n_events= 9772655 + 2735170 + 3502967,
@@ -114,10 +114,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='data_egamma_Cv4',
+    name='data_muoneg_Cv4',
     id=2211985,
     is_data=True,
-    processes=[procs.data_egamma],
+    processes=[procs.data_muoneg],
     keys=['/MuonEG_Run2023C_v4'],
     n_files=21,
     n_events=24205121 ,
