@@ -14,10 +14,28 @@ cpn.add_dataset(
     )
 
 cpn.add_dataset(
-        name="h_ggf_htt_unfiltered",
-        id=220178223,
-        processes=[procs.h_ggf_htt],
-        keys=["/GluGluHTo2Tau_UncorrelatedDecay_UnFiltered",],
-        n_files=1,
-        n_events=499966,
+        name="h_ggf_htt_cpo_filtered",
+        id=220236895,
+        processes=[procs.h_ggf_htt_cpo],
+        keys=["/GluGluHTo2Tau_UncorrelatedDecay_CPodd_Filtered_ProdAndDecay",],
+        n_files=42,
+        n_events=26545013,
+    )
+
+cpn.add_dataset(
+        name="h_ggf_htt_mm_filtered",
+        id=220336895,
+        processes=[procs.h_ggf_htt_mm],
+        keys=["/GluGluHTo2Tau_UncorrelatedDecay_MM_Filtered_ProdAndDecay",],
+        n_files=40,
+        n_events=25643123,
+    )
+
+cpn.add_dataset(
+        name="h_ggf_htt_sm_filtered",
+        id=220436895,
+        processes=[procs.h_ggf_htt_sm],
+        keys=["/GluGluHTo2Tau_UncorrelatedDecay_SM_Filtered_ProdAndDecay",],
+        n_files=38,
+        n_events=24356269,
     )
