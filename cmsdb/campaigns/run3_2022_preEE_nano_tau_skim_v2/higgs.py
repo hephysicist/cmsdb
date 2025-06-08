@@ -22,3 +22,31 @@ cpn.add_dataset(
         n_files=1,
         n_events=121559+77742,
     )
+
+
+cpn.add_dataset(
+        name="h_ggf_htt_cpo_filtered",
+        id=2202782231,
+        processes=[procs.h_ggf_htt_cpo],
+        keys=["/GluGluHTo2Tau_UncorrelatedDecay_CPodd_Filtered_ProdAndDecay",],
+        n_files=14,
+        n_events=8872610,
+    )
+
+cpn.add_dataset(
+        name="h_ggf_htt_mm_filtered",
+        id=2203782232,
+        processes=[procs.h_ggf_htt_mm],
+        keys=["/GluGluHTo2Tau_UncorrelatedDecay_MM_Filtered_ProdAndDecay",],
+        n_files=13,
+        n_events=7964846,
+    )
+
+cpn.add_dataset(
+        name="h_ggf_htt_sm_filtered",
+        id=2204782233,
+        processes=[procs.h_ggf_htt_sm],
+        keys=["/GluGluHTo2Tau_UncorrelatedDecay_SM_Filtered_ProdAndDecay",],
+        n_files=14,
+        n_events=8329190,
+    )

@@ -5,10 +5,10 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_postEE_v2_nano_tau_v14 import campaign_run3_2022_postEE_v2_nano_tau_v14 as cpn
 
 cpn.add_dataset(
-        name="data_e_E",
+        name="data_egamma_E",
         id=220146437,
         is_data=True,
-        processes=[procs.data_e],
+        processes=[procs.data_egamma],
         keys=["/EGamma_Run2022E",],
         n_files=78,
         n_events=148661479,
@@ -16,10 +16,10 @@ cpn.add_dataset(
     )
 
 cpn.add_dataset(
-        name="data_e_F",
+        name="data_egamma_F",
         id=220192395,
         is_data=True,
-        processes=[procs.data_e],
+        processes=[procs.data_egamma],
         keys=["/EGamma_Run2022F",],
         n_files=254,
         n_events=464077454,
@@ -27,10 +27,10 @@ cpn.add_dataset(
     )
 
 cpn.add_dataset(
-        name="data_e_G",
+        name="data_egamma_G",
         id=220174572,
         is_data=True,
-        processes=[procs.data_e],
+        processes=[procs.data_egamma],
         keys=["/EGamma_Run2022G",],
         n_files=43,
         n_events=76724231,
@@ -102,3 +102,42 @@ cpn.add_dataset(
         n_events=76689396,
     aux={"era": "G"},
     )
+
+cpn.add_dataset(
+    name='data_muoneg_E',
+    id=2212004,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=['/MuonEG_Run2022E'],
+    n_files=10,
+    n_events=12868267,
+    aux={
+        'era': 'E'
+    }
+)
+
+cpn.add_dataset(
+    name='data_muoneg_F',
+    id=2212005,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=['/MuonEG_Run2022F'],
+    n_files=31,
+    n_events=38159099,
+    aux={
+        'era': 'F'
+    }
+)
+
+cpn.add_dataset(
+    name='data_muoneg_G',
+    id=2212006,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=['/MuonEG_Run2022G'],
+    n_files=5,
+    n_events=6238527,
+    aux={
+        'era': 'G'
+    }
+)

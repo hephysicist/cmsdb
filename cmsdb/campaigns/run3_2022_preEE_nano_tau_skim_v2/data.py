@@ -13,10 +13,10 @@ CMS datasets from the 2022 post-EE data-taking campaign
 """
 
 cpn.add_dataset(
-    name='data_e_C',
+    name='data_egamma_C',
     id=2212010,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=['/EGamma_Run2022C'],
     n_files=119,
     n_events=263549470,
@@ -26,10 +26,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='data_e_D',
+    name='data_egamma_D',
     id=2212011,
     is_data=True,
-    processes=[procs.data_e],
+    processes=[procs.data_egamma],
     keys=['/EGamma_Run2022D'],
     n_files=46,
     n_events=89134996,
@@ -103,3 +103,28 @@ cpn.add_dataset(
     }
 )
 
+cpn.add_dataset(
+    name='data_muoneg_C',
+    id=2212030,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=['/MuonEG_Run2022C'],
+    n_files=13,
+    n_events=15768439,
+    aux={
+        'era': 'C'
+    }
+)
+
+cpn.add_dataset(
+    name='data_muoneg_D',
+    id=2212031,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=['/MuonEG_Run2022D'],
+    n_files=7,
+    n_events=8007031,
+    aux={
+        'era': 'D'
+    }
+)

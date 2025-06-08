@@ -25,5 +25,6 @@ campaign_run3_2022_preEE_nano_tau_skim_v2 = Campaign(
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2.ewk
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2.data
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2.top
+import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2.signal
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2.higgs
 
