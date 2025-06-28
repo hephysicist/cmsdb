@@ -574,6 +574,7 @@ h_ggf_htt_mm = h_ggf_htt.add_process(
     name="h_ggf_htt_mm",
     id=11103,
     xsecs = h_ggf_htt_xsecs,
+)
 
 # Higgs sub-decay channels
 # TODO: mapping of parent processes does not yet work here
