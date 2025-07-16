@@ -539,18 +539,21 @@ h_ggf_htt_xsecs = {
 
 h_ggf_htt_cpo = h_ggf_htt.add_process(
     name="h_ggf_htt_cpo",
+    label=r"$H_{ggf}\rightarrow\tau\tau, CP-odd$",
     id=11101,
     xsecs = h_ggf_htt_xsecs,
 )
 
 h_ggf_htt_sm = h_ggf_htt.add_process(
     name="h_ggf_htt_sm",
+    label=r"$H_{ggf}\rightarrow\tau\tau$, CP-even",
     id=11102,
     xsecs = h_ggf_htt_xsecs,
 )
 
 h_ggf_htt_mm = h_ggf_htt.add_process(
     name="h_ggf_htt_mm",
+    label=r"$H_{ggf}\rightarrow\tau\tau$, Max. mixing",
     id=11103,
     xsecs = h_ggf_htt_xsecs,
 
