@@ -10,10 +10,10 @@ campaign_run3_2022_preEE_nano_tau_skim_v2 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 3,
         "year": 2022,
         "version": 14,
         "tag": "preEE",
-        "run": 3,
         "custom": {
             "name": "run3_2022_preEE_nano_tau_skim_v2",
             "creator": "desy",

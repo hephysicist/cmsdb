@@ -39,3 +39,41 @@ cpn.add_dataset(
         n_files=38,
         n_events=24356269,
     )
+
+#VBF signal samples 
+cpn.add_dataset(
+        name="h_vbf_htt_filtered",
+        id=2204368954,
+        processes=[procs.h_vbf_htt_sm],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
+cpn.add_dataset(
+        name="h_vbf_htt_sm_filtered",
+        id=2204368955,
+        processes=[procs.h_vbf_htt_sm],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
+cpn.add_dataset(
+        name="h_vbf_htt_cpo_filtered",
+        id=2204368956,
+        processes=[procs.h_vbf_htt_cpo],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
+cpn.add_dataset(
+        name="h_vbf_htt_mm_filtered",
+        id=2204368957,
+        processes=[procs.h_vbf_htt_mm],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
