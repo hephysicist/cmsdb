@@ -11,7 +11,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_
 cpn.add_dataset(
     name='st_tchannel_t',
     id=22120118,
-    processes=[procs.st_tchannel_t],
+    processes=[procs.st_tchannel_t,],
     keys=['/ST_t_channel_top_4f_InclusiveDecays'],
     n_files=3,
     n_events=2737505.0,
@@ -22,7 +22,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_tchannel_tbar',
     id=22120119,
-    processes=[procs.st_tchannel_tbar],
+    processes=[procs.st_tchannel_tbar,],
     keys=['/ST_t_channel_antitop_4f_InclusiveDecays'],
     n_files=2,
     n_events=1325389.0,
@@ -32,7 +32,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_twchannel_t_sl',
     id=22120120,
-    processes=[procs.st_twchannel_t_sl],
+    processes=[procs.st_twchannel_t_sl,],
     keys=['/ST_tW_top_LNu2Q', '/ST_tW_top_LNu2Q_ext1'],
     n_files=9+9,
     n_events=4743805+4900178,
@@ -42,7 +42,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_twchannel_t_dl',
     id=22120121,
-    processes=[procs.st_twchannel_t_dl],
+    processes=[procs.st_twchannel_t_dl,],
     keys=['/ST_tW_top_2L2Nu', '/ST_tW_top_2L2Nu_ext1'],
     n_files=5+5,
     n_events=2386952+2499916,
@@ -53,7 +53,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_twchannel_t_fh',
     id=22120122,
-    processes=[procs.st_twchannel_t_fh],
+    processes=[procs.st_twchannel_t_fh,],
     keys=['/ST_tW_top_4Q', '/ST_tW_top_4Q_ext1'],
     n_files=5+5,
     n_events=3861851+3909424,
@@ -63,7 +63,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_twchannel_tbar_sl',
     id=22120123,
-    processes=[procs.st_twchannel_tbar_sl],
+    processes=[procs.st_twchannel_tbar_sl,],
     keys=['/ST_tW_antitop_LNu2Q', '/ST_tW_antitop_LNu2Q_ext1'],
     n_files=8+9,
     n_events=4366325+4816386,
@@ -73,7 +73,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_twchannel_tbar_dl',
     id=22120124,
-    processes=[procs.st_twchannel_tbar_dl],
+    processes=[procs.st_twchannel_tbar_dl,],
     keys=['/ST_tW_antitop_2L2Nu', '/ST_tW_antitop_2L2Nu_ext1'],
     n_files=5+5,
     n_events=2327604+2435657,
@@ -83,7 +83,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='st_twchannel_tbar_fh',
     id=22120125,
-    processes=[procs.st_twchannel_tbar_fh],
+    processes=[procs.st_twchannel_tbar_fh,],
     keys=['/ST_tW_antitop_4Q', '/ST_tW_antitop_4Q_ext1'],
     n_files=5+5,
     n_events=3762818+3999850,
@@ -92,7 +92,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_schannel_t_lep",
     id=22120126,
-    processes=[procs.st_schannel_t_lep],
+    processes=[procs.st_schannel_t_lep,],
     keys=['/ST_s_channel_top_4f_leptonDecays'],
     n_files=2,
     n_events=781538,
@@ -100,7 +100,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="st_schannel_tbar_lep",
     id=22120127,
-    processes=[procs.st_schannel_tbar_lep],
+    processes=[procs.st_schannel_tbar_lep,],
     keys=['/ST_s_channel_antitop_4f_leptonDecays'],
     n_files=1,
     n_events=484738,

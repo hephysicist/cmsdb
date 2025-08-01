@@ -180,6 +180,10 @@ vv = Process(
     color="#7aee7a"
 )
 
+from cmsdb.processes.combined_procs import vvt
+
+vv.add_parent_process(vvt)
+
 # ZZ 13 TeV xsec values at nNNLO from
 zz = vv.add_process(
     name="zz",

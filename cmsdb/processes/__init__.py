@@ -5,6 +5,7 @@ Physics processes and cross sections.
 """
 
 # provisioning imports
+from cmsdb.processes.combined_procs import *  # noqa
 from cmsdb.processes.data import *  # noqa
 from cmsdb.processes.top import *  # noqa
 from cmsdb.processes.ewk import *  # noqa

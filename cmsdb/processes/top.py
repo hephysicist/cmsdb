@@ -114,6 +114,9 @@ st = Process(
         "mtop": (25.4, 24.6),}),},
     color="#66d2ff",   
 )
+from cmsdb.processes.combined_procs import vvt
+
+st.add_parent_process(vvt)
 
 st_tchannel = st.add_process(
     name="st_tchannel",

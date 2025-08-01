@@ -19,7 +19,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_
 cpn.add_dataset(
     name='dy_lep_madgraph', #DYto2L_M-50
     id=2212016,
-    processes=[procs.dy_lep],
+    processes=[procs.dy_lep, procs.dy_z2ee, procs.dy_z2mumu, procs.dy_z2tautau,],
     keys=['/DYto2L_M_50_madgraphMLM', '/DYto2L_M_50_madgraphMLM_ext1'],
     n_files=70+69,
     n_events=72652311+71371699,
@@ -39,7 +39,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='ww',
     id=22120112,
-    processes=[procs.ww],
+    processes=[procs.ww,],
     keys=['/WW'],
     n_files=10,
     n_events=15405496,
@@ -49,7 +49,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='wz',
     id=22120113,
-    processes=[procs.wz],
+    processes=[procs.wz,],
     keys=['/WZ'],
     n_files=5,
     n_events=7479528,
@@ -59,7 +59,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name='zz',
     id=22120114,
-    processes=[procs.zz],
+    processes=[procs.zz,],
     keys=['/ZZ'],
     n_files=1,
     n_events=1181750,
