@@ -140,7 +140,7 @@ __all__ = [
     "h_ggf_hzz4l", "h_ggf_hzz2l2nu", "h_ggf_hzz2l2q", "h_ggf_hzz2q2nu", "h_ggf_hzz4nu", "h_ggf_hzz4q",
     "h_ggf_hzg_zll", "h_ggf_hzg_zqq", "h_ggf_hzg_znunu",
     "h_vbf",
-    "h_vbf_htt", "h_vbf_hww", "h_vbf_hzz", "h_vbf_hbb", "h_vbf_hnonbb", "h_vbf_hcc",
+    "h_vbf_htt", "h_vbf_htt_cpo", "h_vbf_htt_sm", "h_vbf_htt_mm", "h_vbf_hww", "h_vbf_hzz", "h_vbf_hbb", "h_vbf_hnonbb", "h_vbf_hcc",
     "h_vbf_hzg", "h_vbf_hgg", "h_vbf_hmm",
     "h_vbf_hwwqqlnu", "h_vbf_hww2l2nu", "h_vbf_hww4q",
     "h_vbf_hzz4l", "h_vbf_hzz2l2nu", "h_vbf_hzz2l2q", "h_vbf_hzz2q2nu", "h_vbf_hzz4nu", "h_vbf_hzz4q",
@@ -560,18 +560,21 @@ for mass in signal_masses:
 
 h_ggf_htt_cpo = h_ggf_htt.add_process(
     name="h_ggf_htt_cpo",
+    label=r"$H_{ggf}\rightarrow\tau\tau, CP-odd$",
     id=11101,
     xsecs = h_ggf_htt_xsecs,
 )
 
 h_ggf_htt_sm = h_ggf_htt.add_process(
     name="h_ggf_htt_sm",
+    label=r"$H_{ggf}\rightarrow\tau\tau$, CP-even",
     id=11102,
     xsecs = h_ggf_htt_xsecs,
 )
 
 h_ggf_htt_mm = h_ggf_htt.add_process(
     name="h_ggf_htt_mm",
+    label=r"$H_{ggf}\rightarrow\tau\tau$, Max. mixing",
     id=11103,
     xsecs = h_ggf_htt_xsecs,
 )
@@ -624,6 +627,36 @@ h_vbf_hcc = add_decay_process(h_vbf, h_decay_map.hcc)
 h_vbf_hzg = add_decay_process(h_vbf, h_decay_map.hzg)
 h_vbf_hgg = add_decay_process(h_vbf, h_decay_map.hgg)
 h_vbf_hmm = add_decay_process(h_vbf, h_decay_map.hmm)
+
+
+# Aternative CP processes for ggf htt process    
+h_vbf_htt_xsecs = {
+        ecm: h_vbf_htt.get_xsec(ecm) 
+        for ecm in h_vbf_htt.xsecs.keys()
+}
+
+h_vbf_htt_cpo = h_vbf_htt.add_process(
+    name="h_vbf_htt_cpo",
+    label=r"$H_{VBF}\rightarrow\tau\tau, CP-odd$",
+    id=12101,
+    xsecs = h_vbf_htt_xsecs,
+)
+
+h_vbf_htt_sm = h_vbf_htt.add_process(
+    name="h_vbf_htt_sm",
+    label=r"$H_{VBF}\rightarrow\tau\tau$, CP-even",
+    id=12102,
+    xsecs = h_vbf_htt_xsecs,
+)
+
+h_vbf_htt_mm = h_vbf_htt.add_process(
+    name="h_vbf_htt_mm",
+    label=r"$H_{VBF}\rightarrow\tau\tau$, Max. mixing",
+    id=12103,
+    xsecs = h_vbf_htt_xsecs,
+
+)
+
 
 # Higgs sub-decay channels
 h_vbf_hwwqqlnu = add_sub_decay_process(h_vbf_hww, ww_decay_map["qqlnu"])

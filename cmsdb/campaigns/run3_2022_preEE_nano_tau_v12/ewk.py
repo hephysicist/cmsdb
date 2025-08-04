@@ -19,7 +19,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_tau_v12 import campaign_run3_2022_preE
 cpn.add_dataset(
     name='dy_incl', #DYto2L_M-50
     id=2212016,
-    processes=[procs.dy_lep],
+    processes=[procs.dy_lep, procs.dy_z2ee, procs.dy_z2mumu, procs.dy_z2tautau,],
     keys=['/DYto2L_M-50_madgraphMLM', '/DYto2L_M-50_madgraphMLM_ext1'],
     n_files=32+31,
     n_events=73914947+71371699,

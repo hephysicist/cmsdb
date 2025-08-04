@@ -10,10 +10,10 @@ campaign_run3_2023_postBPix_nano_tau_skim_v2 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 3,
         "year": 2023,
         "version": 14,
         "tag": "postBPix",
-        "run": 3,
         "custom": {
             "name": "run3_2023_postBPix_nano_tau_skim_v2",
             "creator": "desy",
@@ -25,5 +25,4 @@ campaign_run3_2023_postBPix_nano_tau_skim_v2 = Campaign(
 import cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_v2.ewk
 import cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_v2.data
 import cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_v2.top
-import cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_v2.signal
 import cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_v2.higgs

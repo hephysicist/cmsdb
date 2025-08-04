@@ -15,7 +15,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
         name="h_ggf_htt_cpo_filtered",
-        id=220236895,
+        id=2202368951,
         processes=[procs.h_ggf_htt_cpo],
         keys=["/GluGluHTo2Tau_UncorrelatedDecay_CPodd_Filtered_ProdAndDecay",],
         n_files=42,
@@ -24,7 +24,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
         name="h_ggf_htt_mm_filtered",
-        id=220336895,
+        id=2203368952,
         processes=[procs.h_ggf_htt_mm],
         keys=["/GluGluHTo2Tau_UncorrelatedDecay_MM_Filtered_ProdAndDecay",],
         n_files=40,
@@ -33,9 +33,47 @@ cpn.add_dataset(
 
 cpn.add_dataset(
         name="h_ggf_htt_sm_filtered",
-        id=220436895,
+        id=2204368953,
         processes=[procs.h_ggf_htt_sm],
         keys=["/GluGluHTo2Tau_UncorrelatedDecay_SM_Filtered_ProdAndDecay",],
         n_files=38,
         n_events=24356269,
     )
+
+#VBF signal samples 
+cpn.add_dataset(
+        name="h_vbf_htt_filtered",
+        id=2204368954,
+        processes=[procs.h_vbf_htt_sm],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
+cpn.add_dataset(
+        name="h_vbf_htt_sm_filtered",
+        id=2204368955,
+        processes=[procs.h_vbf_htt_sm],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
+cpn.add_dataset(
+        name="h_vbf_htt_cpo_filtered",
+        id=2204368956,
+        processes=[procs.h_vbf_htt_cpo],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
+cpn.add_dataset(
+        name="h_vbf_htt_mm_filtered",
+        id=2204368957,
+        processes=[procs.h_vbf_htt_mm],
+        keys=["/VBFHToTauTau_UncorrelatedDecay_Filtered",],
+        n_files=26,
+        n_events=14552639,
+    )
+
