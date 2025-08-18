@@ -17,4 +17,5 @@ vvt = Process(
     name="vvt",
     id=4400,
     label=f"top + VV",
+    color="#7aee7a"
 )
