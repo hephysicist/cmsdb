@@ -53,7 +53,7 @@ for mass, n_evt, n_files in [
 ]:
     cpn.add_dataset(
         name=f"h_ggf_htt_{mass}",
-        id=mass,
+        id=mass+10**6,
         processes=[procs.h_ggf_htt.get_process(f"h_ggf_htt_{mass}")],
         keys=[f"/GluGluHto2Tau_M_{mass}_2HDM_II"],
         n_files=n_files,

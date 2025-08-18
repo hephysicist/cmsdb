@@ -26,4 +26,4 @@ import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_v2.ewk
 import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_v2.data
 import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_v2.top
 import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_v2.higgs
-
+import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_v2.signal

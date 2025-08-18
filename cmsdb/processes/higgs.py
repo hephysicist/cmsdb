@@ -551,7 +551,7 @@ this_module = sys.modules[__name__]
 for mass in signal_masses:
     proc = h_ggf_htt.add_process(
         name=f"h_ggf_htt_{mass}",
-        id=mass+100000,
+        id=mass+10**8,
         xsecs=h_ggf_htt_xsecs,
     )
     # define a variable like h_ggf_htt_60, h_ggf_htt_65, …
