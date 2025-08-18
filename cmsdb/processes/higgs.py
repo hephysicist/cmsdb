@@ -134,13 +134,13 @@ __all__ = [
     "h_hzz4l", "h_hzz2l2nu", "h_hzz2l2q", "h_hzz2q2nu", "h_hzz4nu", "h_hzz4q",
     "h_hzg_zll", "h_hzg_zqq", "h_hzg_znunu",
     "h_ggf",
-    "h_ggf_htt", "h_ggf_htt_cpo", "h_ggf_htt_sm", "h_ggf_htt_mm", "h_ggf_hww", "h_ggf_hzz", "h_ggf_hbb", "h_ggf_hnonbb", "h_ggf_hcc",
+    "h_ggf_htt", "h_ggf_hww", "h_ggf_hzz", "h_ggf_hbb", "h_ggf_hnonbb", "h_ggf_hcc",
     "h_ggf_hzg", "h_ggf_hgg", "h_ggf_hmm",
     "h_ggf_hwwqqlnu", "h_ggf_hww2l2nu", "h_ggf_hww4q",
     "h_ggf_hzz4l", "h_ggf_hzz2l2nu", "h_ggf_hzz2l2q", "h_ggf_hzz2q2nu", "h_ggf_hzz4nu", "h_ggf_hzz4q",
     "h_ggf_hzg_zll", "h_ggf_hzg_zqq", "h_ggf_hzg_znunu",
     "h_vbf",
-    "h_vbf_htt", "h_vbf_htt_cpo", "h_vbf_htt_sm", "h_vbf_htt_mm", "h_vbf_hww", "h_vbf_hzz", "h_vbf_hbb", "h_vbf_hnonbb", "h_vbf_hcc",
+    "h_vbf_htt", "h_vbf_hww", "h_vbf_hzz", "h_vbf_hbb", "h_vbf_hnonbb", "h_vbf_hcc",
     "h_vbf_hzg", "h_vbf_hgg", "h_vbf_hmm",
     "h_vbf_hwwqqlnu", "h_vbf_hww2l2nu", "h_vbf_hww4q",
     "h_vbf_hzz4l", "h_vbf_hzz2l2nu", "h_vbf_hzz2l2q", "h_vbf_hzz2q2nu", "h_vbf_hzz4nu", "h_vbf_hzz4q",
@@ -534,7 +534,6 @@ h_ggf_hmm = add_decay_process(h_ggf, h_decay_map.hmm)
 
 signal_masses = [60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 160, 180, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1400, 1600, 1800, 2000, 2300, 2600, 2900, 3200, 3500]
 
-# Aternative CP processes for ggf htt process    
 
 h_ggf_htt_xsecs = {
         ecm: h_ggf_htt.get_xsec(ecm) 
@@ -557,27 +556,6 @@ for mass in signal_masses:
     )
     # define a variable like h_ggf_htt_60, h_ggf_htt_65, …
     setattr(this_module, f"h_ggf_htt_{mass}", proc)
-
-h_ggf_htt_cpo = h_ggf_htt.add_process(
-    name="h_ggf_htt_cpo",
-    label=r"$H_{ggf}\rightarrow\tau\tau, CP-odd$",
-    id=11101,
-    xsecs = h_ggf_htt_xsecs,
-)
-
-h_ggf_htt_sm = h_ggf_htt.add_process(
-    name="h_ggf_htt_sm",
-    label=r"$H_{ggf}\rightarrow\tau\tau$, CP-even",
-    id=11102,
-    xsecs = h_ggf_htt_xsecs,
-)
-
-h_ggf_htt_mm = h_ggf_htt.add_process(
-    name="h_ggf_htt_mm",
-    label=r"$H_{ggf}\rightarrow\tau\tau$, Max. mixing",
-    id=11103,
-    xsecs = h_ggf_htt_xsecs,
-)
 
 # Higgs sub-decay channels
 # TODO: mapping of parent processes does not yet work here
@@ -629,33 +607,6 @@ h_vbf_hgg = add_decay_process(h_vbf, h_decay_map.hgg)
 h_vbf_hmm = add_decay_process(h_vbf, h_decay_map.hmm)
 
 
-# Aternative CP processes for ggf htt process    
-h_vbf_htt_xsecs = {
-        ecm: h_vbf_htt.get_xsec(ecm) 
-        for ecm in h_vbf_htt.xsecs.keys()
-}
-
-h_vbf_htt_cpo = h_vbf_htt.add_process(
-    name="h_vbf_htt_cpo",
-    label=r"$H_{VBF}\rightarrow\tau\tau, CP-odd$",
-    id=12101,
-    xsecs = h_vbf_htt_xsecs,
-)
-
-h_vbf_htt_sm = h_vbf_htt.add_process(
-    name="h_vbf_htt_sm",
-    label=r"$H_{VBF}\rightarrow\tau\tau$, CP-even",
-    id=12102,
-    xsecs = h_vbf_htt_xsecs,
-)
-
-h_vbf_htt_mm = h_vbf_htt.add_process(
-    name="h_vbf_htt_mm",
-    label=r"$H_{VBF}\rightarrow\tau\tau$, Max. mixing",
-    id=12103,
-    xsecs = h_vbf_htt_xsecs,
-
-)
 
 
 # Higgs sub-decay channels
