@@ -50,7 +50,8 @@ h_ggf_htt_sm = h_ggf_htt.add_process(
 
 h_ggf_htt_sm_prod_sm = h_ggf_htt_sm.add_process(
     name="h_ggf_htt_sm_prod_sm",
-    label=r"$H_{ggf}\rightarrow\tau\tau$)",
+    #label=r"$H_{ggf}\rightarrow\tau\tau$)",
+    label=r"$ggH$, SM",
     id=11111,
     xsecs = h_ggf_htt_xsecs,
 )
@@ -78,7 +79,8 @@ h_ggf_htt_mm = h_ggf_htt.add_process(
 
 h_ggf_htt_mm_prod_sm = h_ggf_htt_mm.add_process(
     name="h_ggf_htt_mm_prod_sm",
-    label=r"$H_{ggf}\rightarrow\tau\tau$, max. mix (prod CP-even)",
+    #label=r"$H_{ggf}\rightarrow\tau\tau$, MM",
+    label=r"$ggH$, MM",
     id=11121,
     xsecs = h_ggf_htt_xsecs,
 )
@@ -107,7 +109,8 @@ h_ggf_htt_cpo = h_ggf_htt.add_process(
 
 h_ggf_htt_cpo_prod_sm = h_ggf_htt_cpo.add_process(
     name="h_ggf_htt_cpo_prod_sm",
-    label=r"$H_{ggf}\rightarrow\tau\tau$, CP-odd (prod CP-even)",
+    #label=r"$H_{ggf}\rightarrow\tau\tau$, CP-odd",
+    label=r"$ggH$, PS",
     id=11131,
     xsecs = h_ggf_htt_xsecs,
 )
@@ -162,28 +165,32 @@ h_vbf_htt_xsecs = {
 
 h_vbf_htt_cpo = h_vbf_htt.add_process(
     name="h_vbf_htt_cpo",
-    label=r"$H_{VBF}\rightarrow\tau\tau, CP-odd$",
+    #label=r"$H_{VBF}\rightarrow\tau\tau, CP-odd$",
+    label=r"$qqH$, PS",
     id=12101,
     xsecs = h_vbf_htt_xsecs,
 )
 
 h_vbf_htt_sm = h_vbf_htt.add_process(
     name="h_vbf_htt_sm",
-    label=r"$H_{VBF}\rightarrow\tau\tau$",
+    #label=r"$H_{VBF}\rightarrow\tau\tau$",
+    label=r"$qqH$, SM",
     id=12102,
     xsecs = h_vbf_htt_xsecs,
 )
 
 h_vbf_htt_mm = h_vbf_htt.add_process(
     name="h_vbf_htt_mm",
-    label=r"$H_{VBF}\rightarrow\tau\tau$, max. mix",
+    #label=r"$H_{VBF}\rightarrow\tau\tau$, max. mix",
+    label=r"$qqH$, MM",
     id=12103,
     xsecs = h_vbf_htt_xsecs,
 )
 
 h_vbf_htt_flat = h_vbf_htt.add_process(
     name="h_vbf_htt_flat",
-    label=r"$H_{VBF}\rightarrow\tau\tau$, flat",
+    #label=r"$H_{VBF}\rightarrow\tau\tau$, flat",
+   
     id=12104,
     xsecs = h_vbf_htt_xsecs,
 )
@@ -296,21 +303,24 @@ zh_htt_xsecs = {
 
 zh_htt_cpo = zh_htt.add_process(
     name="zh_htt_cpo",
-    label=r"$Z(H\rightarrow\tau\tau), CP-odd$",
+    #label=r"$Z(H\rightarrow\tau\tau), CP-odd$",
+    label=r"$ZH$, PS",
     id=14999,
     xsecs = zh_htt_xsecs,
 )
 
 zh_htt_sm = zh_htt.add_process(
     name="zh_htt_sm",
-    label=r"$Z(H\rightarrow\tau\tau)$",
+    #label=r"$Z(H\rightarrow\tau\tau)$",
+    label=r"$ZH$, SM",
     id=14998,
     xsecs = zh_htt_xsecs,
 )
 
 zh_htt_mm = zh_htt.add_process(
     name="zh_htt_mm",
-    label=r"$Z(H\rightarrow\tau\tau), max. mix$",
+    #label=r"$Z(H\rightarrow\tau\tau), max. mix$",
+    label=r"$ZH$, MM",
     id=14997,
     xsecs = zh_htt_xsecs,
 )
