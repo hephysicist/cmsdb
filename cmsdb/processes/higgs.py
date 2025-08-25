@@ -532,6 +532,31 @@ h_ggf_hgg = add_decay_process(h_ggf, h_decay_map.hgg)
 h_ggf_hmm = add_decay_process(h_ggf, h_decay_map.hmm)
 
 
+signal_masses = [60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 160, 180, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1400, 1600, 1800, 2000, 2300, 2600, 2900, 3200, 3500]
+
+
+h_ggf_htt_xsecs = {
+        ecm: h_ggf_htt.get_xsec(ecm) 
+        for ecm in h_ggf_htt.xsecs.keys()
+}
+
+
+# Aternative MSSM processes for ggf htt process    
+
+import sys
+
+# grab a reference to this module so we can attach new names to it
+this_module = sys.modules[__name__]
+
+for mass in signal_masses:
+    proc = h_ggf_htt.add_process(
+        name=f"h_ggf_htt_{mass}",
+        id=mass+10**8,
+        xsecs=h_ggf_htt_xsecs,
+    )
+    # define a variable like h_ggf_htt_60, h_ggf_htt_65, …
+    setattr(this_module, f"h_ggf_htt_{mass}", proc)
+
 # Higgs sub-decay channels
 # TODO: mapping of parent processes does not yet work here
 h_ggf_hwwqqlnu = add_sub_decay_process(h_ggf_hww, ww_decay_map["qqlnu"])
