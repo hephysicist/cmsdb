@@ -531,33 +531,6 @@ h_ggf_hzg = add_decay_process(h_ggf, h_decay_map.hzg)
 h_ggf_hgg = add_decay_process(h_ggf, h_decay_map.hgg)
 h_ggf_hmm = add_decay_process(h_ggf, h_decay_map.hmm)
 
-# Aternative CP processes for ggf htt process    
-# h_ggf_htt_xsecs = {
-#         ecm: h_ggf_htt.get_xsec(ecm) 
-#         for ecm in h_ggf_htt.xsecs.keys()
-# }
-
-# h_ggf_htt_cpo = h_ggf_htt.add_process(
-#     name="h_ggf_htt_cpo",
-#     label=r"$H_{ggf}\rightarrow\tau\tau, CP-odd$",
-#     id=11101,
-#     xsecs = h_ggf_htt_xsecs,
-# )
-
-# h_ggf_htt_sm = h_ggf_htt.add_process(
-#     name="h_ggf_htt_sm",
-#     label=r"$H_{ggf}\rightarrow\tau\tau$, CP-even",
-#     id=11102,
-#     xsecs = h_ggf_htt_xsecs,
-# )
-
-# h_ggf_htt_mm = h_ggf_htt.add_process(
-#     name="h_ggf_htt_mm",
-#     label=r"$H_{ggf}\rightarrow\tau\tau$, Max. mixing",
-#     id=11103,
-#     xsecs = h_ggf_htt_xsecs,
-
-# )
 
 # Higgs sub-decay channels
 # TODO: mapping of parent processes does not yet work here
