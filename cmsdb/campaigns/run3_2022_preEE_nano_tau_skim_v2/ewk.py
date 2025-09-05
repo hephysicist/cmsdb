@@ -19,7 +19,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_
 cpn.add_dataset(
     name='dy_lep_madgraph', #DYto2L_M-50
     id=2212016,
-    processes=[procs.dy_lep, procs.dy_z2ee, procs.dy_z2mumu, procs.dy_z2tautau,],
+    processes=[procs.dy_lep], #procs.dy_z2ee, procs.dy_z2mumu, procs.dy_z2tautau,],
     keys=['/DYto2L_M_50_madgraphMLM', '/DYto2L_M_50_madgraphMLM_ext1'],
     n_files=70+69,
     n_events=72652311+71371699,
