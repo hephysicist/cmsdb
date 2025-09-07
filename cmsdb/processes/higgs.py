@@ -255,7 +255,7 @@ __all__ = [
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
     # TODO: the following processes are not yet implemented in full combination
-    "bbh", "ttvh", "ttzh", "ttwh", "thw", "thq", "thb",
+    "bbh","bbh_htt","ttvh", "ttzh", "ttwh", "thw", "thq", "thb",
 ]
 
 
@@ -1444,6 +1444,21 @@ bbh = h.add_process(
     },
     aux={"production_mode_parent": h},
 )
+
+bbh_htt = add_decay_process(bbh, h_decay_map.htt)
+
+bbh_htt_xsecs = {
+        ecm: bbh_htt.get_xsec(ecm) 
+        for ecm in bbh_htt.xsecs.keys()
+}
+for mass in signal_masses:
+    proc = bbh_htt.add_process(
+        name=f"bbh_htt_{mass}",
+        id=mass+1+10**8,
+        xsecs=bbh_htt_xsecs,
+    )
+    # define a variable like bbh_htt_60, bbh_htt_65, …
+    setattr(this_module, f"bbh_htt_{mass}", proc)
 
 ttvh = h.add_process(
     name="ttvh",

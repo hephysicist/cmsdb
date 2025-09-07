@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-CMS datasets from the 2022 Pre_BPix data-taking campaign
+CMS datasets from the 2023 Pre_BPix data-taking campaign
 """
 
 import cmsdb.processes as procs
