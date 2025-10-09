@@ -20,7 +20,7 @@ from cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_v2  import campaign_run3_20
 cpn.add_dataset(
     name='dy_lep_madgraph', #DYto2L_M-50
     id=2212013,
-    processes=[procs.dy_lep], #procs.dy_z2ee, procs.dy_z2mumu, procs.dy_z2tautau,],
+    processes=[procs.dy_lep],
     keys=['/DYto2L_M_50_madgraphMLM'],
     n_files=128,
     n_events=130559088,

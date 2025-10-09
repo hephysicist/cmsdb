@@ -18,7 +18,7 @@ cpn.add_dataset(
         name="dy_lep_madgraph",
         id=220154049,
 #        is_mc=True,
-        processes=[procs.dy_lep], #,procs.dy_z2ee,procs.dy_z2mumu,procs.dy_z2tautau],
+        processes=[procs.dy_lep],
         keys=["/DYto2L_M_50_madgraphMLM","/DYto2L_M_50_madgraphMLM_ext1",],
         n_files=464,
         n_events=494841164,
