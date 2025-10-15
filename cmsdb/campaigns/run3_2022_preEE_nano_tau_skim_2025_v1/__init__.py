@@ -25,4 +25,5 @@ campaign_run3_2022_preEE_nano_tau_skim_2025_v1 = Campaign(
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_2025_v1.data
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_2025_v1.bkgs
 import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_2025_v1.signal
+import cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_2025_v1.cp_signal
 
