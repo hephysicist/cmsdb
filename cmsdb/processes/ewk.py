@@ -15,7 +15,8 @@ __all__ = [
     "dy","dy_lep",#"dy_z2mumu","dy_z2ee","dy_z2tautau",
     "dy_ll_m50","dy_ll_m50_0j","dy_ll_m50_1j","dy_ll_m50_2j",
     "dy_tt_m50","dy_tt_m50_0j","dy_tt_m50_1j","dy_tt_m50_2j",
-    "w","w_lnu","wj",
+    "w","w_lnu","wj",""
+    "w","w_lnu","wj","wj_1j","wj_2j","wj_3j","wj_4j",
     "vv","ww","wz","zz"
 ]
 
@@ -63,7 +64,7 @@ dy_ll_m50 = dy_lep.add_process(
     name="dy_ll_m50",
     label=rf"$Z \rightarrow \ell\ell$",
     id=51100,
-    xsecs={13.6: Number(6747, {"tot": 30.85})},
+    xsecs={13.6: Number(6747, {"tot": 30.85})* kfactor_dy},
     color="#3399cc",
 )
 
@@ -105,8 +106,7 @@ dy_tt_m50_0j = dy_tt_m50.add_process(
     name="dy_tt_m50_0j",
     id=51651,
     xsecs={
-        #13.6: Number(1664.684), 
-        13.6: Number(5368/3. * kfactor_dy), # Factor of 1/3 from taking only taus
+        13.6: Number(5377,{"tot": 15.09}) * kfactor_dy /3.,
     },
 )
 
@@ -114,8 +114,7 @@ dy_tt_m50_1j = dy_tt_m50.add_process(
     name="dy_tt_m50_1j",
     id=51652,
     xsecs={
-        #13.6: Number(316.240),
-        13.6: Number(1014/3. * kfactor_dy), 
+        13.6: Number(1036, {"tot": 63.32}) * kfactor_dy /3., 
     },
 )
 
@@ -123,8 +122,7 @@ dy_tt_m50_2j = dy_tt_m50.add_process(
     name="dy_tt_m50_2j",
     id=51653,
     xsecs={
-        #13.6: Number(116.472),
-        13.6: Number(380.8/3. * kfactor_dy), 
+        13.6: Number(375.8, {"tot": 6.895}) * kfactor_dy /3., 
     },
 )
 # dy_z2ee = dy_lep.add_process(
@@ -243,11 +241,14 @@ w_lnu = w.add_process(
         }),
         13.6: Number(67710.0, {"total": 834},)
     },
+    color="#c95954"
 )
 
 
-
-#kfactor_wj=63425.1/55300 # LO->NNLO+NLO_EW k-factor computed for 13.6 TeV
+#x-secs are taken from xsec analyser:
+#https://cms-generators.docs.cern.ch/useful-tools-and-links/HowToGenXSecAnalyzer/#during-the-production-of-mc-samples
+#curl https://raw.githubusercontent.com/cms-sw/genproductions/master/Utilities/calculateXSectionAndFilterEfficiency/genXsec_cfg.py -o ana.py
+#cmsRun ana.py inputFiles="/store/mc/Run3Summer22MiniAODv4/WtoLNu-4Jets_TuneCP5_13p6TeV_madgraphMLM-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_v5-v2/40000/87f20e33-c9b5-4a40-9056-532c201980bb.root" maxEvents=-1
 wj = w.add_process(
     name="wj",
     id=6001,
@@ -257,12 +258,49 @@ wj = w.add_process(
             "scale": (165.7, 88.2),
             "pdf": 770.9,
         }),
-        # addition necessary due to absence of combined value
-        13.6: 55300.*kfactor_wj, 
-            #wm_lnu_xs_13p6 + wp_lnu_xs_13p6,
+        13.6:  Number(54250, {"total":  106.9},)*kfactor_wj, 
     },
     color="#c95954"
 )
+#cmsRun ana.py inputFiles="/store/mc/Run3Summer22MiniAODv4/WtoLNu-4Jets_1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_v5-v1/60000/7614f956-d7d5-4d09-a8e5-f00bcd329ea5.root" maxEvents=-1
+wj_1j = w.add_process(
+    name="wj_1j",
+    id=6011,
+    label="W + 1 jet",
+        xsecs={13.6: Number(9166, {"total":  26.90},)*kfactor_wj, 
+    },
+
+    color="#c95954"
+)
+#cmsRun ana.py inputFiles="/store/mc/Run3Summer22MiniAODv4/WtoLNu-4Jets_2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_v5-v1/60000/cce5ebfd-1e6b-4958-b686-1e2e9c48f78f.root" maxEvents=-1
+wj_2j = w.add_process(
+    name="wj_2j",
+    id=6021,
+    label="W + 2 jet",
+        xsecs={13.6:  Number(2942, {"total": 9.558},)*kfactor_wj, 
+    },
+    color="#c95954"
+)
+#cmsRun ana.py inputFiles="/store/mc/Run3Summer22MiniAODv4/WtoLNu-4Jets_3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_v5-v2/50000/a4d4296e-8fd8-48bb-9a69-d353bce82c28.root" maxEvents=-1
+wj_3j = w.add_process(
+    name="wj_3j",
+    id=6031,
+    label="W + 3 jets",
+        xsecs={13.6: Number(864.4, {"total": 3.037},) * kfactor_wj, 
+    },
+    color="#c95954"
+)
+
+#cmsRun ana.py inputFiles="/store/mc/Run3Summer22MiniAODv4/WtoLNu-4Jets_4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_v5-v2/30000/e35e9a14-7946-4369-b311-50ac6ab209cb.root" maxEvents=-1
+wj_4j = w.add_process(
+    name="wj_4j",
+    id=6041,
+    label="W + 4 jets",
+        xsecs={13.6: Number(419.0, {"total": 1.6},)*kfactor_wj, 
+    },
+    color="#c95954"
+)
+
 
 #
 # Diboson
