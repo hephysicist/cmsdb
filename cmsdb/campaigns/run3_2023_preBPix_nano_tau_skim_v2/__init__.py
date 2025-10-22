@@ -14,6 +14,7 @@ campaign_run3_2023_preBPix_nano_tau_skim_v2 = Campaign(
         "year": 2023,
         "version": 14,
         "tag": "preBPix",
+        "postfix" : "",
         "custom": {
             "name": "run3_2023_preBPix_nano_tau_skim_v2",
             "creator": "desy",

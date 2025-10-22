@@ -14,6 +14,7 @@ campaign_run3_2022_preEE_nano_tau_skim_v2 = Campaign(
         "year": 2022,
         "version": 14,
         "tag": "preEE",
+        "postfix" : "",
         "custom": {
             "name": "run3_2022_preEE_nano_tau_skim_v2",
             "creator": "desy",
