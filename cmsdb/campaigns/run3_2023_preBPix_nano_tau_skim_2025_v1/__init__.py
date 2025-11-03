@@ -14,6 +14,7 @@ campaign_run3_2023_preBPix_nano_tau_skim_2025_v1 = Campaign(
         "year": 2023,
         "version": 14,
         "tag": "preBPix",
+        "postfix" : "",
         "custom": {
             "name": "run3_2023_preBPix_nano_tau_skim_2025_v1",
             "creator": "desy",
@@ -25,4 +26,4 @@ campaign_run3_2023_preBPix_nano_tau_skim_2025_v1 = Campaign(
 import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_2025_v1.bkgs
 import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_2025_v1.data
 import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_2025_v1.signal
-
+import cmsdb.campaigns.run3_2023_preBPix_nano_tau_skim_2025_v1.cp_signal
