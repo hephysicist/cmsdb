@@ -9,7 +9,7 @@ from cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_2025_v1  import campaign_r
 
 
 cpn.add_dataset(
-    name='data_egamma_2023_D',
+    name='data_egamma_D',
     id=105892646 + 22657211 + 105850543 + 22653287,
     is_data=True,
     processes=[procs.data_egamma],
@@ -23,7 +23,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name='data_mu_2023_D',
+    name='data_mu_D',
     id=100211533 + 21462916 + 100281976 + 21463645,
     is_data=True,
     processes=[procs.data_mu],
@@ -36,7 +36,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='data_tau_2023_D',
+    name='data_tau_D',
     id=32092659 + 7246202,
     is_data=True,
     processes=[procs.data_tau],
@@ -49,7 +49,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name='data_muoneg_2023_D',
+    name='data_muoneg_D',
     id=17530531 + 3751587,
     is_data=True,
     processes=[procs.data_muoneg],

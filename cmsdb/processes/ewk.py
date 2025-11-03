@@ -15,9 +15,8 @@ __all__ = [
     "dy","dy_lep",#"dy_z2mumu","dy_z2ee","dy_z2tautau",
     "dy_ll_m50","dy_ll_m50_0j","dy_ll_m50_1j","dy_ll_m50_2j",
     "dy_tt_m50","dy_tt_m50_0j","dy_tt_m50_1j","dy_tt_m50_2j",
-    "w","w_lnu","wj",""
     "w","w_lnu","wj","wj_1j","wj_2j","wj_3j","wj_4j",
-    "vv","ww","wz","zz"
+    "vv","ww","wz","zz",
 ]
 
 

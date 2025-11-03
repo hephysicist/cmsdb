@@ -5,7 +5,7 @@ signals for CP analysis from the 2022 post-EE campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2022_postEE_nano_tau_skim_2025_v1 import campaign_run3_2022_postEE_nano_tau_skim_2025_v1 as cpn  # TODO: adjust if needed
+from cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_2025_v1 import campaign_run3_2023_postBPix_nano_tau_skim_2025_v1 as cpn 
 
 import re
 from collections import OrderedDict
@@ -79,13 +79,13 @@ def add_merged_datasets(dataset_rows, cpn, procs):
 
 dataset_rows = [
     #ggH SM production
-    ("h_ggf_htt_sm_prod_sm_filtered",  ["/GluGluHto2Tau_UncorrelatedDecay_SM_Filtered_ProdAndDecay"],    19599725,  49,  22100000, "h_ggf_htt_sm_prod_sm"),
-    ("h_ggf_htt_sm_prod_cpo_filtered", ["/GluGluHto2Tau_UncorrelatedDecay_CPodd_Filtered_ProdAndDecay"], 21495773,  54,  22100010, "h_ggf_htt_sm_prod_cpo"),
-    ("h_ggf_htt_sm_prod_mm_filtered",  ["/GluGluHto2Tau_UncorrelatedDecay_MM_Filtered_ProdAndDecay"],    20689379,  52,  22100020, "h_ggf_htt_sm_prod_mm"),
-    ("h_vbf_htt_sm_filtered",          ["/VBFHto2Tau_UncorrelatedDecay_Filtered"],                       14552639,  35,  22100030, "h_vbf_htt_sm"),
-    ("zh_htt_sm_filtered",             ["/ZHto2Tau_UncorrelatedDecay_Filtered"],                         1863291,   6,   22100040, "zh_htt_sm"),
-    ("wph_htt_sm_filtered",            ["/WplusHto2Tau_UncorrelatedDecay_Filtered"],                     2025321,   6,   22100050, "wph_htt_sm"),
-    ("wmh_htt_sm_filtered",            ["/WminusHto2Tau_UncorrelatedDecay_Filtered"],                    1480135,   4,   22100060, "wmh_htt_sm"),
+    ("h_ggf_htt_sm_prod_sm_filtered",  ["/GluGluHto2Tau_UncorrelatedDecay_SM_Filtered_ProdAndDecay"],      8623785, 23,  23100000, "h_ggf_htt_sm_prod_sm"),
+    ("h_ggf_htt_sm_prod_cpo_filtered", ["/GluGluHto2Tau_UncorrelatedDecay_CPodd_Filtered_ProdAndDecay"],   9103069, 24,  23100010, "h_ggf_htt_sm_prod_cpo"),
+    ("h_ggf_htt_sm_prod_mm_filtered",  ["/GluGluHto2Tau_UncorrelatedDecay_MM_Filtered_ProdAndDecay"],      9115963, 24,  23100020, "h_ggf_htt_sm_prod_mm"),
+    ("h_vbf_htt_sm_filtered",          ["/VBFHto2Tau_UncorrelatedDecay_Filtered"],                         7048003, 18,  23100030, "h_vbf_htt_sm"),
+    ("zh_htt_sm_filtered",             ["/ZHto2Tau_UncorrelatedDecay_Filtered"],                           1007812,  3,  23100040, "zh_htt_sm"),
+    ("wph_htt_sm_filtered",            ["/WplusHto2Tau_UncorrelatedDecay_Filtered"],                        952493,  3,  23100050, "wph_htt_sm"),
+    ("wmh_htt_sm_filtered",            ["/WminusHto2Tau_UncorrelatedDecay_Filtered"],                       718725,  2,  23100060, "wmh_htt_sm"),
 ]
 
 dataset_rows_cp = []
@@ -96,5 +96,4 @@ for name, key, n_evt, n_files, pid, proc in dataset_rows:
         cp_proc = proc.replace('htt_sm', the_cp_var)
         cp_pid=pid+idx+1
         dataset_rows_cp.append((cp_name, key, n_evt, n_files, cp_pid, cp_proc))
-
 add_merged_datasets(dataset_rows_cp, cpn, procs)
