@@ -81,7 +81,7 @@ def add_merged_datasets(dataset_rows, cpn, procs):
 dataset_rows = [
   ("GluGluHto2Tau_UncorrelatedDecay_SM_UnFiltered_ProdAndDecay",  ["/GluGluHto2Tau_UncorrelatedDecay_SM_UnFiltered_ProdAndDecay"],    158678,   1, 2693954882, "h_ggf_htt_sm_prod_sm"            ),
   ("VBFHto2Tau_UncorrelatedDecay_UnFiltered",                     ["/VBFHto2Tau_UncorrelatedDecay_UnFiltered"],                        99878,   1,  896795747, "h_vbf_htt_sm"            ),
-  #("DYto2L_M_10to50_amcatnloFXFX",                                ["/DYto2L_M_10to50_amcatnloFXFX"],                                52363920,  48, 2602844442, "dy_m10to50"           ),
+  ("DYto2L_M_10to50_amcatnloFXFX",                                ["/DYto2L_M_10to50_amcatnloFXFX"],                                52363920,  48, 2602844442, "dy_ll_m10to50"           ),
   ("DYto2L_M_50_0J_amcatnloFXFX",                                 ["/DYto2L_M_50_0J_amcatnloFXFX"],                                 70152268, 120, 2577421953, "dy_ll_m50_0j"       ),
   ("DYto2L_M_50_1J_amcatnloFXFX",                                 ["/DYto2L_M_50_1J_amcatnloFXFX"],                                 45431665, 171,  542870889, "dy_ll_m50_1j"       ),
   ("DYto2L_M_50_2J_amcatnloFXFX",                                 ["/DYto2L_M_50_2J_amcatnloFXFX"],                                 21946124, 154,  824633104, "dy_ll_m50_2j"       ),

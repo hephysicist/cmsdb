@@ -78,7 +78,7 @@ def add_merged_datasets(dataset_rows, cpn, procs):
 # ---- your datasets (name, key, n_evt, n_files, pid, proc) ----
 dataset_rows = [
   #DY amc@nlo
-  #("DYto2L_M_10to50_amcatnloFXFX",                                ["/DYto2L_M_10to50_amcatnloFXFX"],                                74917918,  71, 2676360070, "dy_m10to50"         ),
+  ("DYto2L_M_10to50_amcatnloFXFX",                                ["/DYto2L_M_10to50_amcatnloFXFX"],                                74917918,  71, 2676360070, "dy_ll_m10to50"         ),
   ("DYto2L_M_50_0J_amcatnloFXFX",                                 ["/DYto2L_M_50_0J_amcatnloFXFX"],                                 76989083, 133, 3770998535, "dy_ll_m50_0j"       ),
   ("DYto2L_M_50_1J_amcatnloFXFX",                                 ["/DYto2L_M_50_1J_amcatnloFXFX"],                                 42819115, 162, 1497302255, "dy_ll_m50_1j"       ),
   ("DYto2L_M_50_2J_amcatnloFXFX",                                 ["/DYto2L_M_50_2J_amcatnloFXFX"],                                 23588533, 170, 1212313238, "dy_ll_m50_2j"       ),
