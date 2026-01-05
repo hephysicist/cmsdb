@@ -12,7 +12,7 @@ bound and exclusive in the upper bound, i.e. (a, b) means a <= x < b:
 """
 
 __all__ = [
-    "dy","dy_lep",#"dy_z2mumu","dy_z2ee","dy_z2tautau",
+    "dy","dy_lep","dy_ll_m10to50",#"dy_z2mumu","dy_z2ee","dy_z2tautau",
     "dy_ll_m50","dy_ll_m50_0j","dy_ll_m50_1j","dy_ll_m50_2j",
     "dy_tt_m50","dy_tt_m50_0j","dy_tt_m50_1j","dy_tt_m50_2j",
     "w","w_lnu","wj","wj_1j","wj_2j","wj_3j","wj_4j",
@@ -55,8 +55,19 @@ dy_lep = dy.add_process(
     id=51000,
     label=rf"$Z \rightarrow ll$",
     xsecs={13.6: Number(0.1)},
+    color="#3399cc",
 )
 
+#cmsRun ana.py inputFiles="/store/mc/Run3Summer22EEMiniAODv4/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/MINIAODSIM/130X_mcRun3_2022_realistic_postEE_v6-v2/40000/72347977-ab73-4657-8578-2745772a3213.root" maxEvents=-1
+dy_ll_m10to50 = dy_lep.add_process(
+    name="dy_ll_m10to50",
+    label=rf"$Z \rightarrow \ell\ell, m < 50$",
+    id=51001,
+    xsecs={13.6: Number(21190, {"tot": 65.60})* kfactor_dy},
+    aux={
+        "mll": (10.0, 50.0),
+    },
+)
 
 ### DY to LL incl bagged taus ###
 dy_ll_m50 = dy_lep.add_process(
@@ -94,10 +105,10 @@ dy_ll_m50_2j = dy_ll_m50.add_process(
 
 ### DY to TauTau ###
 
-dy_tt_m50 = dy_lep.add_process(
+dy_tt_m50 = dy.add_process(
     name="dy_tt_m50",
     id=51650,
-    label=rf"$Z \rightarrow \tau\tau$+jet fakes",
+    label=rf"$Z \rightarrow \tau\tau$",
     color="#a172bd",
 )
 
