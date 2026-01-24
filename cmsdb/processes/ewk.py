@@ -15,7 +15,7 @@ __all__ = [
     "dy","dy_lep","dy_ll_m10to50",#"dy_z2mumu","dy_z2ee","dy_z2tautau",
     "dy_ll_m50","dy_ll_m50_0j","dy_ll_m50_1j","dy_ll_m50_2j",
     "dy_tt_m50","dy_tt_m50_0j","dy_tt_m50_1j","dy_tt_m50_2j",
-    "w","w_lnu","wj","wj_1j","wj_2j","wj_3j","wj_4j",
+    "w","wj","wj_1j","wj_2j","wj_3j","wj_4j",
     "vv","ww","wz","zz",
 ]
 
@@ -229,6 +229,7 @@ w = Process(
     id=6000,
     label="W + jets",
     xsecs={13.6: Number(0.1)},  # TODO
+    color="#c95954"
 )
 
 wm_lnu_xs_13p6 = const.n_leps * Number(9009.5, {
@@ -240,19 +241,19 @@ wp_lnu_xs_13p6 = const.n_leps * Number(12122.5, {
     "pdf": 0.007j,
 })
 # xsec taken from: https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3DWtoLNu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
-w_lnu = w.add_process(
-    name="w_lnu",
-    id=6100,
-    label=rf"{w.label} ($W \rightarrow l\nu$)",
-    xsecs={
-        13: const.n_leps * Number(20508.9, {
-            "scale": (165.7, 88.2),
-            "pdf": 770.9,
-        }),
-        13.6: Number(67710.0, {"total": 834},)
-    },
-    color="#c95954"
-)
+# w_lnu = w.add_process(
+#     name="w_lnu",
+#     id=6100,
+#     label=rf"{w.label} ($W \rightarrow l\nu$)",
+#     xsecs={
+#         13: const.n_leps * Number(20508.9, {
+#             "scale": (165.7, 88.2),
+#             "pdf": 770.9,
+#         }),
+#         13.6: Number(67710.0, {"total": 834},)
+#     },
+#     color="#c95954"
+# )
 
 
 #x-secs are taken from xsec analyser:
